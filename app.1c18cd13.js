@@ -41780,16 +41780,19 @@ var Messenger = function (_React$Component) {
     _this.state = { username: '', usertext: '' };
     var macrosUrl = 'https://script.google.com/macros/s/AKfycbzLDy5pQBSTSeEe83h1H8pMbojeqiz2_EFSB8Tx84JmSQjqYzTO/exec';
     _reduxStore.store.subscribe(function () {
-      console.log({ username: _this.state.username, usertext: _this.state.usertext });
+      // console.log({username: this.state.username, usertext: this.state.usertext});
       if (_reduxStore.store.getState().msgStatus === 'sending') {
-        _axios2.default.get(macrosUrl, {
-          dataType: "json",
-          data: { username: _this.state.username, usertext: _this.state.usertext }
-        }).then(function () {
+        var xhr = new XMLHttpRequest();
+        var url = 'https://script.google.com/macros/s/AKfycbzLDy5pQBSTSeEe83h1H8pMbojeqiz2_EFSB8Tx84JmSQjqYzTO/exec?username=' + encodeURIComponent(_this.state.username) + '&usertext=' + encodeURIComponent(_this.state.usertext);
+        xhr.open('GET', url, true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState != 4) return;
           (0, _reduxStore.setMsgStatus)('delivered');
-        }).catch(function () {
-          (0, _reduxStore.setMsgStatus)('error');
-        });
+          if (xhr.status != 200) {
+            (0, _reduxStore.setMsgStatus)('error');
+          }
+        };
       }
     });
     return _this;
