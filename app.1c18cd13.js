@@ -41784,7 +41784,7 @@ var Messenger = function (_React$Component) {
       if (_reduxStore.store.getState().msgStatus === 'sending') {
         (0, _axios2.default)({
           url: macrosUrl,
-          method: "GET",
+          method: "get",
           dataType: "json",
           data: { username: _this.state.username, usertext: _this.state.usertext }
         }).then(function () {
