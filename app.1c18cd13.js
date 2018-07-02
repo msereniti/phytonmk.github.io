@@ -41778,7 +41778,7 @@ var Messenger = function (_React$Component) {
 
     _this.handleTyping = _this.handleTyping.bind(_this);
     _this.state = { username: '', usertext: '' };
-    var macrosUrl = 'https://script.googleusercontent.com/macros/echo?' + 'user_content_key=xvA-TtKs6NbSNujGyPrIvwbPhWd7_sCk1OGnRTkZy5HXmashy' + 'iiBXZXkHYEJbN1IykMG36BkkbtObTAM9qo-8o0ljXZw1TY_m5_BxDlH2jW0nuo2oDe' + 'mN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLG30VBsWsP24Ts_1y3eRJFUDm6qLS4P8On' + 'WNY8igKJOXZVrA765_5P_7kK4Fz4tHtP_ArQgNVAy&lib=M5Z5ZMDmJkri_1JvPh4t7vmCmJYRmcQB5';
+    var macrosUrl = 'https://script.google.com/macros/s/AKfycbzLDy5pQBSTSeEe83h1H8pMbojeqiz2_EFSB8Tx84JmSQjqYzTO/exec';
     _reduxStore.store.subscribe(function () {
       console.log({ username: _this.state.username, usertext: _this.state.usertext });
       if (_reduxStore.store.getState().msgStatus === 'sending') {
