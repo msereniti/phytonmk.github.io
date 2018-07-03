@@ -324,6 +324,10 @@ figure.pic-container {
   #person-section .contacts-container {
     justify-content: space-around !important; } }
 
+@media (max-width: 960px) {
+  .dark-shape {
+    transition: none; } }
+
 @media (max-width: 880px) {
   #name-section h2 {
     padding-left: 50%; }
@@ -338,6 +342,9 @@ figure.pic-container {
     transform: scaleX(2); } }
 
 @media (max-width: 750px) {
+  #stack-section .stack-string {
+    padding-left: 25px;
+    padding-right: 25px; }
   #projects-section .project-container {
     text-align: center; }
     #projects-section .project-container .project-icon {
