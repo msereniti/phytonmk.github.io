@@ -222,6 +222,7 @@ figure.pic-container {
     text-align: center; }
     #messenger-section > div input, #messenger-section > div textarea, #messenger-section > div button {
       width: 350px;
+      max-width: calc(100% - 36px);
       padding: 10px;
       border: 8px solid white;
       margin-top: 20px;
@@ -336,10 +337,6 @@ figure.pic-container {
     #stack-section .stack-container .stack-block {
       text-align: center; } }
 
-@media (max-width: 800px) {
-  .dark-shape {
-    transform: scaleX(2); } }
-
 @media (max-width: 750px) {
   #stack-section .stack-string {
     padding-left: 25px;
@@ -354,3 +351,20 @@ figure.pic-container {
     align-items: center; }
     #person-section .contacts-container > div {
       margin-top: 50px; } }
+
+@media (max-width: 400px) {
+  .dark-shape {
+    -webkit-clip-path: polygon(5% 0, 95% 0, 95% 100%, 5% 100%) !important;
+    clip-path: polygon(5% 0, 95% 0, 95% 100%, 5% 100%) !important; }
+  #name-section h1 {
+    font-size: 60px; } }
+
+@media (max-width: 350px) {
+  #name-section h1 {
+    font-size: 50px; } }
+
+@media (max-width: 290px) {
+  #name-section h1 {
+    font-size: 25px; }
+  #name-section h2 {
+    font-size: 20px; } }
