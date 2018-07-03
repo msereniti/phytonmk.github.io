@@ -53,10 +53,9 @@ html, body, #root, #provider-wrapper {
   position: fixed;
   left: calc(50% - 552.5px);
   top: calc(50% - 378.5px);
-  z-index: 1; }
-  .dark-shape.form-0 {
-    -webkit-clip-path: polygon(0 30%, 100% 41%, 96% 84%, 13% 69%);
-    clip-path: polygon(0 30%, 100% 41%, 96% 84%, 13% 69%); }
+  z-index: 1;
+  -webkit-clip-path: polygon(0 30%, 100% 41%, 96% 84%, 13% 69%);
+  clip-path: polygon(0 30%, 100% 41%, 96% 84%, 13% 69%); }
   .dark-shape.form-1 {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
