@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({47:[function(require,module,exports) {
+})({91:[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -194,7 +194,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
-},{}],48:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -248,7 +248,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-},{}],50:[function(require,module,exports) {
+},{}],90:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -266,7 +266,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = emptyObject;
-},{}],51:[function(require,module,exports) {
+},{}],93:[function(require,module,exports) {
 "use strict";
 
 /**
@@ -303,7 +303,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],49:[function(require,module,exports) {
+},{}],89:[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -366,7 +366,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = warning;
-},{"./emptyFunction":51}],78:[function(require,module,exports) {
+},{"./emptyFunction":93}],105:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -380,7 +380,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],52:[function(require,module,exports) {
+},{}],94:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -459,7 +459,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 }
 
 module.exports = checkPropTypes;
-},{"./lib/ReactPropTypesSecret":78}],17:[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":105}],60:[function(require,module,exports) {
 /** @license React v16.4.1
  * react.development.js
  *
@@ -1940,7 +1940,7 @@ if ('development' !== "production") {
     module.exports = react;
   })();
 }
-},{"object-assign":47,"fbjs/lib/invariant":48,"fbjs/lib/emptyObject":50,"fbjs/lib/warning":49,"fbjs/lib/emptyFunction":51,"prop-types/checkPropTypes":52}],4:[function(require,module,exports) {
+},{"object-assign":91,"fbjs/lib/invariant":92,"fbjs/lib/emptyObject":90,"fbjs/lib/warning":89,"fbjs/lib/emptyFunction":93,"prop-types/checkPropTypes":94}],35:[function(require,module,exports) {
 'use strict';
 
 if ('development' === 'production') {
@@ -1948,7 +1948,7 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":17}],294:[function(require,module,exports) {
+},{"./cjs/react.development.js":60}],114:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1982,7 +1982,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],295:[function(require,module,exports) {
+},{}],115:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2019,7 +2019,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],298:[function(require,module,exports) {
+},{}],116:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2085,7 +2085,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],308:[function(require,module,exports) {
+},{}],125:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2108,7 +2108,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],306:[function(require,module,exports) {
+},{}],121:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2131,7 +2131,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":308}],296:[function(require,module,exports) {
+},{"./isNode":125}],117:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2169,7 +2169,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":306}],157:[function(require,module,exports) {
+},{"./isTextNode":121}],122:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2200,7 +2200,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],152:[function(require,module,exports) {
+},{}],118:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2237,7 +2237,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":157}],158:[function(require,module,exports) {
+},{"./hyphenate":122}],123:[function(require,module,exports) {
 "use strict";
 
 /**
@@ -2267,7 +2267,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],154:[function(require,module,exports) {
+},{}],119:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2305,7 +2305,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":158}],292:[function(require,module,exports) {
+},{"./camelize":123}],55:[function(require,module,exports) {
 /** @license React v16.4.1
  * react-dom.development.js
  *
@@ -19711,7 +19711,7 @@ if ('development' !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"fbjs/lib/invariant":48,"react":4,"fbjs/lib/warning":49,"fbjs/lib/ExecutionEnvironment":294,"object-assign":47,"fbjs/lib/emptyFunction":51,"prop-types/checkPropTypes":52,"fbjs/lib/getActiveElement":295,"fbjs/lib/shallowEqual":298,"fbjs/lib/containsNode":296,"fbjs/lib/emptyObject":50,"fbjs/lib/hyphenateStyleName":152,"fbjs/lib/camelizeStyleName":154}],290:[function(require,module,exports) {
+},{"fbjs/lib/invariant":92,"react":35,"fbjs/lib/warning":89,"fbjs/lib/ExecutionEnvironment":114,"object-assign":91,"fbjs/lib/emptyFunction":93,"prop-types/checkPropTypes":94,"fbjs/lib/getActiveElement":115,"fbjs/lib/shallowEqual":116,"fbjs/lib/containsNode":117,"fbjs/lib/emptyObject":90,"fbjs/lib/hyphenateStyleName":118,"fbjs/lib/camelizeStyleName":119}],36:[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -19747,7 +19747,7 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":292}],79:[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":55}],102:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20284,7 +20284,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
   return ReactPropTypes;
 };
-},{"object-assign":47,"./lib/ReactPropTypesSecret":78,"./checkPropTypes":52}],61:[function(require,module,exports) {
+},{"object-assign":91,"./lib/ReactPropTypesSecret":105,"./checkPropTypes":94}],98:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20308,7 +20308,7 @@ if ('development' !== 'production') {
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
-},{"./factoryWithTypeCheckers":79}],59:[function(require,module,exports) {
+},{"./factoryWithTypeCheckers":102}],96:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20324,7 +20324,7 @@ exports["default"] = _propTypes2["default"].shape({
   dispatch: _propTypes2["default"].func.isRequired,
   getState: _propTypes2["default"].func.isRequired
 });
-},{"prop-types":61}],60:[function(require,module,exports) {
+},{"prop-types":98}],97:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20350,7 +20350,7 @@ function warning(message) {
   } catch (e) {}
   /* eslint-enable no-empty */
 }
-},{}],31:[function(require,module,exports) {
+},{}],77:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20445,7 +20445,7 @@ Provider.propTypes = {
 Provider.childContextTypes = {
   store: _storeShape2["default"].isRequired
 };
-},{"react":4,"prop-types":61,"../utils/storeShape":59,"../utils/warning":60}],67:[function(require,module,exports) {
+},{"react":35,"prop-types":98,"../utils/storeShape":96,"../utils/warning":97}],99:[function(require,module,exports) {
 "use strict";
 
 exports.__esModule = true;
@@ -20472,7 +20472,7 @@ function shallowEqual(objA, objB) {
 
   return true;
 }
-},{}],80:[function(require,module,exports) {
+},{}],106:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20496,7 +20496,7 @@ function symbolObservablePonyfill(root) {
 
 	return result;
 };
-},{}],62:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 var global = arguments[3];
 'use strict';
 
@@ -20527,7 +20527,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2.default)(root);
 exports.default = result;
-},{"./ponyfill.js":80}],24:[function(require,module,exports) {
+},{"./ponyfill.js":106}],65:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21132,7 +21132,7 @@ exports.bindActionCreators = bindActionCreators;
 exports.applyMiddleware = applyMiddleware;
 exports.compose = compose;
 exports.__DO_NOT_USE__ActionTypes = ActionTypes;
-},{"symbol-observable":62}],68:[function(require,module,exports) {
+},{"symbol-observable":95}],100:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -21145,14 +21145,14 @@ function wrapActionCreators(actionCreators) {
     return (0, _redux.bindActionCreators)(actionCreators, dispatch);
   };
 }
-},{"redux":24}],130:[function(require,module,exports) {
+},{"redux":65}],124:[function(require,module,exports) {
 var global = arguments[3];
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 module.exports = freeGlobal;
 
-},{}],125:[function(require,module,exports) {
+},{}],120:[function(require,module,exports) {
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -21163,7 +21163,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
-},{"./_freeGlobal":130}],93:[function(require,module,exports) {
+},{"./_freeGlobal":124}],111:[function(require,module,exports) {
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -21171,7 +21171,7 @@ var Symbol = root.Symbol;
 
 module.exports = Symbol;
 
-},{"./_root":125}],94:[function(require,module,exports) {
+},{"./_root":120}],112:[function(require,module,exports) {
 var Symbol = require('./_Symbol');
 
 /** Used for built-in method references. */
@@ -21219,7 +21219,7 @@ function getRawTag(value) {
 
 module.exports = getRawTag;
 
-},{"./_Symbol":93}],95:[function(require,module,exports) {
+},{"./_Symbol":111}],113:[function(require,module,exports) {
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -21243,7 +21243,7 @@ function objectToString(value) {
 
 module.exports = objectToString;
 
-},{}],81:[function(require,module,exports) {
+},{}],107:[function(require,module,exports) {
 var Symbol = require('./_Symbol'),
     getRawTag = require('./_getRawTag'),
     objectToString = require('./_objectToString');
@@ -21273,7 +21273,7 @@ function baseGetTag(value) {
 
 module.exports = baseGetTag;
 
-},{"./_Symbol":93,"./_getRawTag":94,"./_objectToString":95}],92:[function(require,module,exports) {
+},{"./_Symbol":111,"./_getRawTag":112,"./_objectToString":113}],110:[function(require,module,exports) {
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -21290,7 +21290,7 @@ function overArg(func, transform) {
 
 module.exports = overArg;
 
-},{}],82:[function(require,module,exports) {
+},{}],108:[function(require,module,exports) {
 var overArg = require('./_overArg');
 
 /** Built-in value references. */
@@ -21298,7 +21298,7 @@ var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
 
-},{"./_overArg":92}],83:[function(require,module,exports) {
+},{"./_overArg":110}],109:[function(require,module,exports) {
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -21329,7 +21329,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],70:[function(require,module,exports) {
+},{}],104:[function(require,module,exports) {
 var baseGetTag = require('./_baseGetTag'),
     getPrototype = require('./_getPrototype'),
     isObjectLike = require('./isObjectLike');
@@ -21393,7 +21393,7 @@ function isPlainObject(value) {
 
 module.exports = isPlainObject;
 
-},{"./_baseGetTag":81,"./_getPrototype":82,"./isObjectLike":83}],73:[function(require,module,exports) {
+},{"./_baseGetTag":107,"./_getPrototype":108,"./isObjectLike":109}],101:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -21463,7 +21463,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{}],69:[function(require,module,exports) {
+},{}],103:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -21510,7 +21510,7 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
-},{}],32:[function(require,module,exports) {
+},{}],78:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -21927,7 +21927,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
     return (0, _hoistNonReactStatics2["default"])(Connect, WrappedComponent);
   };
 }
-},{"react":4,"../utils/storeShape":59,"../utils/shallowEqual":67,"../utils/wrapActionCreators":68,"../utils/warning":60,"lodash/isPlainObject":70,"hoist-non-react-statics":73,"invariant":69}],11:[function(require,module,exports) {
+},{"react":35,"../utils/storeShape":96,"../utils/shallowEqual":99,"../utils/wrapActionCreators":100,"../utils/warning":97,"lodash/isPlainObject":104,"hoist-non-react-statics":101,"invariant":103}],52:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -21945,7 +21945,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 exports.Provider = _Provider2["default"];
 exports.connect = _connect2["default"];
-},{"./components/Provider":31,"./components/connect":32}],7:[function(require,module,exports) {
+},{"./components/Provider":77,"./components/connect":78}],44:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22004,7 +22004,7 @@ exports.openPic = openPic;
 exports.setMsgStatus = setMsgStatus;
 exports.setScrollReactions = setScrollReactions;
 exports.store = store;
-},{"redux":24}],20:[function(require,module,exports) {
+},{"redux":65}],66:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22068,7 +22068,7 @@ var Name = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Name;
-},{"react":4}],40:[function(require,module,exports) {
+},{"react":35}],87:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22129,7 +22129,7 @@ var StackBlock = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = StackBlock;
-},{"react":4}],19:[function(require,module,exports) {
+},{"react":35}],67:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22210,7 +22210,7 @@ var Stack = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Stack;
-},{"react":4,"./StackBlock.jsx":40}],37:[function(require,module,exports) {
+},{"react":35,"./StackBlock.jsx":87}],85:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22263,7 +22263,7 @@ var Project = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Project;
-},{"react":4}],22:[function(require,module,exports) {
+},{"react":35}],68:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22291,15 +22291,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var projects = [{
   spriteYCoords: 73 * 0,
   title: 'Rubbish bin of Hackatons\' and other projects',
-  url: 'https//github.com/phytonmk'
+  url: 'https://github.com/phytonmk'
 }, {
   spriteYCoords: 73 * 1,
   title: 'This site sourse code',
-  url: 'https//github.com/phytonmk/site'
+  url: 'https://github.com/phytonmk/site'
 }, {
   spriteYCoords: 73 * 2,
-  title: 'Some fullstack JS project (will be published soon)',
-  url: '#'
+  title: 'Wealthman.io',
+  url: 'https://wealthman.io (as fullstack developer)'
 }, {
   spriteYCoords: 73 * 3,
   title: 'Some Golang project (will be published soon)',
@@ -22350,7 +22350,8 @@ var Projects = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Projects;
-},{"react":4,"./Project.jsx":37}],78:[function(require,module,exports) {
+},{"react":35,"./Project.jsx":85}],64:[function(require,module,exports) {
+var global = arguments[3];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22401,7 +22402,7 @@ var EPPZScrollTo = {
 
         // Snap, then stop if arrived.
         var arrived = Math.abs(difference) <= 0.5;
-        if (arrived) {
+        if (arrived || Date.now() - global.lastScrollEvent < 5) {
             // Apply target.
             scrollTo(0.0, targetPosition);
             (0, _reduxStore.setScrollReactions)(true);
@@ -22459,7 +22460,8 @@ var EPPZScrollTo = {
 var scrollingNow = false;
 
 exports.EPPZScrollTo = EPPZScrollTo;
-},{"./redux-store.js":7}],8:[function(require,module,exports) {
+},{"./redux-store.js":44}],45:[function(require,module,exports) {
+var global = arguments[3];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22470,6 +22472,119 @@ exports.scrollHandler = undefined;
 var _reduxStore = require('./redux-store.js');
 
 var _eppzscrollto = require('./eppzscrollto.js');
+
+var getScrollOffset = function getScrollOffset(screen) {
+  var offset = scrollKeyPossitions[screen][0].offset || 0;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = scrollKeyPossitions[screen][Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var offsets = _step.value;
+
+      if (offsets.maxHeight !== 'infinite' && offsets.maxHeight > document.body.clientHeight) {
+        offset = offsets.offset;
+        break;
+      } else {
+        offset = offsets.offset;
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return offset;
+};
+
+var scrollTimeout = null;
+var scrollHandler = function scrollHandler(currentSection) {
+  global.lastScrollEvent = Date.now();
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(function () {
+    var forcedSection = false;
+    if (!currentSection) {
+      var scrollTop = window.pageYOffset;
+      var sections = document.querySelectorAll('section');
+      if (sections.length === 0) return;
+      currentSection = sections[0];
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = sections[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var section = _step2.value;
+
+          if (scrollTop + document.body.offsetHeight * 3 / 4 > section.offsetTop) {
+            currentSection = section;
+          }
+        }
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+            _iterator2.return();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+    } else {
+      forcedSection = true;
+    }
+    var lastScreen = _reduxStore.store.getState().screen;
+    var offset = 0;
+    switch (currentSection.id) {
+      case 'name-section':
+        (0, _reduxStore.setScreen)(0);
+        offset = getScrollOffset(0);
+        break;
+      case 'stack-section':
+        (0, _reduxStore.setScreen)(1);
+        offset = getScrollOffset(1);
+        break;
+      case 'projects-section':
+        (0, _reduxStore.setScreen)(2);
+        offset = getScrollOffset(2);
+        break;
+      case 'person-section':
+        (0, _reduxStore.setScreen)(3);
+        offset = getScrollOffset(3);
+        break;
+      case 'messenger-section':
+        (0, _reduxStore.setScreen)(4);
+        offset = getScrollOffset(4);
+        break;
+    }
+    if (document.body.offsetWidth > 960 && lastScreen !== _reduxStore.store.getState().screen && currentSection.id /* && store.getState().scrollReactions*/) {
+        _eppzscrollto.EPPZScrollTo.scrollVerticalToElementById(currentSection.id, offset);
+      } else if (forcedSection) {
+      window.scrollTo(0, document.getElementById(currentSection.id).offsetTop);
+    }
+  }, 50);
+};
+if (typeof window !== 'undefined') setTimeout(function () {
+  return scrollHandler(document.querySelector('#name-section'));
+}, 0);
+
+exports.scrollHandler = scrollHandler;
+
 
 var scrollKeyPossitions = [[{
   maxHeight: 285,
@@ -22535,114 +22650,7 @@ var scrollKeyPossitions = [[{
   maxHeight: 'infinite',
   offset: 0
 }]];
-
-var getScrollOffset = function getScrollOffset(screen) {
-  var offset = scrollKeyPossitions[screen][0].offset || 0;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = scrollKeyPossitions[screen][Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var offsets = _step.value;
-
-      if (offsets.maxHeight !== 'infinite' && offsets.maxHeight > document.body.clientHeight) {
-        offset = offsets.offset;
-        break;
-      } else {
-        offset = offsets.offset;
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  return offset;
-};
-
-var scrollHandler = function scrollHandler(currentSection) {
-  var forcedSection = false;
-  if (!currentSection) {
-    var scrollTop = window.pageYOffset;
-    var sections = document.querySelectorAll('section');
-    if (sections.length === 0) return;
-    currentSection = sections[0];
-    var _iteratorNormalCompletion2 = true;
-    var _didIteratorError2 = false;
-    var _iteratorError2 = undefined;
-
-    try {
-      for (var _iterator2 = sections[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-        var section = _step2.value;
-
-        if (scrollTop + document.body.offsetHeight * 3 / 4 > section.offsetTop) {
-          currentSection = section;
-        }
-      }
-    } catch (err) {
-      _didIteratorError2 = true;
-      _iteratorError2 = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion2 && _iterator2.return) {
-          _iterator2.return();
-        }
-      } finally {
-        if (_didIteratorError2) {
-          throw _iteratorError2;
-        }
-      }
-    }
-  } else {
-    forcedSection = true;
-  }
-  var lastScreen = _reduxStore.store.getState().screen;
-  var offset = 0;
-  switch (currentSection.id) {
-    case 'name-section':
-      (0, _reduxStore.setScreen)(0);
-      offset = getScrollOffset(0);
-      break;
-    case 'stack-section':
-      (0, _reduxStore.setScreen)(1);
-      offset = getScrollOffset(1);
-      break;
-    case 'projects-section':
-      (0, _reduxStore.setScreen)(2);
-      offset = getScrollOffset(2);
-      break;
-    case 'person-section':
-      (0, _reduxStore.setScreen)(3);
-      offset = getScrollOffset(3);
-      break;
-    case 'messenger-section':
-      (0, _reduxStore.setScreen)(4);
-      offset = getScrollOffset(4);
-      break;
-  }
-  if (document.body.offsetWidth > 960 && lastScreen !== _reduxStore.store.getState().screen && currentSection.id && _reduxStore.store.getState().scrollReactions) {
-    // console.log('scroll to #' + currentSection.id + ' with offset ' + offset);
-    _eppzscrollto.EPPZScrollTo.scrollVerticalToElementById(currentSection.id, offset);
-  } else if (forcedSection) {
-    window.scrollTo(0, document.getElementById(currentSection.id).offsetTop);
-  }
-};
-if (typeof window !== 'undefined') setTimeout(function () {
-  return scrollHandler(document.querySelector('#name-section'));
-}, 0);
-exports.scrollHandler = scrollHandler;
-},{"./redux-store.js":7,"./eppzscrollto.js":78}],38:[function(require,module,exports) {
+},{"./redux-store.js":44,"./eppzscrollto.js":64}],86:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22730,7 +22738,7 @@ var movePicToCenter = function movePicToCenter(picContainer) {
 exports.default = (0, _reactRedux.connect)(function (a) {
   return a;
 })(Pic);
-},{"react":4,"react-redux":11,"../../redux-store.js":7}],21:[function(require,module,exports) {
+},{"react":35,"react-redux":52,"../../redux-store.js":44}],69:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22844,7 +22852,7 @@ var Person = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Person;
-},{"react":4,"../../scrollHandler.js":8,"./Pic.jsx":38}],39:[function(require,module,exports) {
+},{"react":35,"../../scrollHandler.js":45,"./Pic.jsx":86}],88:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22910,7 +22918,7 @@ var SubmitButton = function (_React$Component) {
 exports.default = (0, _reactRedux.connect)(function (a) {
   return a;
 })(SubmitButton);
-},{"react":4,"react-redux":11,"../../redux-store.js":7}],23:[function(require,module,exports) {
+},{"react":35,"react-redux":52,"../../redux-store.js":44}],70:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22940,7 +22948,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// import axios from 'axios';
 
 var Messenger = function (_React$Component) {
   _inherits(Messenger, _React$Component);
@@ -22954,7 +22961,6 @@ var Messenger = function (_React$Component) {
     _this.state = { username: '', usertext: '' };
     var macrosUrl = 'https://script.google.com/macros/s/AKfycbzLDy5pQBSTSeEe83h1H8pMbojeqiz2_EFSB8Tx84JmSQjqYzTO/exec';
     _reduxStore.store.subscribe(function () {
-      // console.log({username: this.state.username, usertext: this.state.usertext});
       if (_reduxStore.store.getState().msgStatus === 'sending') {
         var xhr = new XMLHttpRequest();
         var url = 'https://script.google.com/macros/s/AKfycbzLDy5pQBSTSeEe83h1H8pMbojeqiz2_EFSB8Tx84JmSQjqYzTO/exec?username=' + encodeURIComponent(_this.state.username) + '&usertext=' + encodeURIComponent(_this.state.usertext);
@@ -23015,7 +23021,7 @@ var Messenger = function (_React$Component) {
 exports.default = (0, _reactRedux.connect)(function (a) {
   return a;
 })(Messenger);
-},{"react":4,"react-redux":11,"../../redux-store.js":7,"./SubmitButton.jsx":39}],18:[function(require,module,exports) {
+},{"react":35,"react-redux":52,"../../redux-store.js":44,"./SubmitButton.jsx":88}],46:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23084,7 +23090,7 @@ var Sections = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Sections;
-},{"react":4,"./sections/Name.jsx":20,"./sections/Stack.jsx":19,"./sections/Projects.jsx":22,"./sections/Person.jsx":21,"./sections/Messenger.jsx":23}],10:[function(require,module,exports) {
+},{"react":35,"./sections/Name.jsx":66,"./sections/Stack.jsx":67,"./sections/Projects.jsx":68,"./sections/Person.jsx":69,"./sections/Messenger.jsx":70}],47:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23139,7 +23145,7 @@ var Background = function (_React$Component) {
 exports.default = (0, _reactRedux.connect)(function (a) {
   return a;
 })(Background);
-},{"react":4,"react-redux":11}],3:[function(require,module,exports) {
+},{"react":35,"react-redux":52}],34:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23221,7 +23227,7 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
-},{"react":4,"react-redux":11,"./redux-store.js":7,"./components/Sections.jsx":18,"./components/Background.jsx":10,"./scrollHandler.js":8}],12:[function(require,module,exports) {
+},{"react":35,"react-redux":52,"./redux-store.js":44,"./components/Sections.jsx":46,"./components/Background.jsx":47,"./scrollHandler.js":45}],12:[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -23239,7 +23245,7 @@ var _app2 = _interopRequireDefault(_app);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.querySelector('#root'));
-},{"react":4,"react-dom":290,"./app.jsx":3}],74:[function(require,module,exports) {
+},{"react":35,"react-dom":36,"./app.jsx":34}],74:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -23268,7 +23274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51883' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '13804' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

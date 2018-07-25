@@ -104,14 +104,25 @@ h2 {
     display: -webkit-flex;
     display: flex;
     justify-content: space-around; }
+    #stack-section .stack-container .stack-block:nth-of-type(1) ul {
+      text-align: left; }
+    #stack-section .stack-container .stack-block:nth-of-type(2) ul {
+      text-align: center; }
+    #stack-section .stack-container .stack-block:nth-of-type(3) ul {
+      text-align: right; }
     #stack-section .stack-container .stack-block h3 {
       font-size: 70px;
       margin-bottom: 0px; }
     #stack-section .stack-container .stack-block ul {
-      margin-top: 0px;
+      margin-top: 10px;
       list-style-type: none;
       padding-left: 0px;
-      font-size: 30px; }
+      font-size: 30px;
+      border: 1px solid white;
+      border-left: 0px;
+      border-right: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px; }
   #stack-section .stack-string {
     font-size: 30px;
     margin-top: 50px;
