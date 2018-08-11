@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({231:[function(require,module,exports) {
+})({252:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -133,7 +133,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],199:[function(require,module,exports) {
+},{}],224:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -164,12 +164,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":231}],79:[function(require,module,exports) {
+},{"./bundle-url":252}],82:[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\assets\\icons\\location.png":203,"./..\\assets\\icons\\call.png":204,"./..\\assets\\icons\\list-checkbox.png":205,"./..\\assets\\icons\\upload.png":206,"./..\\assets\\icons\\arrow-left-in-circle.png":207,"./..\\assets\\icons\\arrow-right-in-circle.png":208,"./..\\assets\\icons\\arrow-left.png":209,"./..\\assets\\icons\\arrow-right.png":210,"./..\\assets\\icons\\checkbox-unchecked.png":263,"./..\\assets\\icons\\checkbox-checked.png":265,"./..\\assets\\others\\first-section-bg.png":201,"./..\\assets\\photos\\red-1.png":247,"./..\\assets\\photos\\red-2.png":246,"./..\\assets\\photos\\red-3.png":249,"./..\\assets\\photos\\red-4.png":248,"./..\\assets\\others\\map.png":202,"_css_loader":199}],139:[function(require,module,exports) {
+},{"./..\\assets\\icons\\location.png":228,"./..\\assets\\icons\\call.png":229,"./..\\assets\\icons\\list-checkbox.png":230,"./..\\assets\\icons\\upload.png":231,"./..\\assets\\icons\\arrow-left-in-circle.png":232,"./..\\assets\\icons\\arrow-right-in-circle.png":233,"./..\\assets\\icons\\arrow-left.png":234,"./..\\assets\\icons\\arrow-right.png":235,"./..\\assets\\icons\\checkbox-unchecked.png":236,"./..\\assets\\icons\\checkbox-checked.png":237,"./..\\assets\\others\\first-section-bg.png":238,"./..\\assets\\photos\\red-1.png":239,"./..\\assets\\photos\\red-2.png":240,"./..\\assets\\photos\\red-3.png":241,"./..\\assets\\photos\\red-4.png":242,"./..\\assets\\others\\map.png":243,"_css_loader":224}],335:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -198,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52087' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '17991' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -339,7 +339,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],507:[function(require,module,exports) {
+},{}],336:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -416,6 +416,6 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":231}],0:[function(require,module,exports) {
-var b=require(507);b.load([["location.f1f21586.png",203],["call.ba996e16.png",204],["list-checkbox.f28b0254.png",205],["upload.880b363e.png",206],["arrow-left-in-circle.cf10ad0e.png",207],["arrow-right-in-circle.b362fba3.png",208],["arrow-left.aa886ee8.png",209],["arrow-right.6bd7ee8b.png",210],["checkbox-unchecked.c0dfd8f5.png",263],["checkbox-checked.93192b5a.png",265],["first-section-bg.33cb64cc.png",201],["red-1.f6dbcaf0.png",247],["red-2.cb7d39ac.png",246],["red-3.5c96b74b.png",249],["red-4.1c4fa1b2.png",248],["map.d1739af0.png",202]]);
-},{}]},{},[139,0], null)
+},{"./bundle-url":252}],0:[function(require,module,exports) {
+var b=require(336);b.load([["location.f1f21586.png",228],["call.ba996e16.png",229],["list-checkbox.f28b0254.png",230],["upload.880b363e.png",231],["arrow-left-in-circle.cf10ad0e.png",232],["arrow-right-in-circle.b362fba3.png",233],["arrow-left.aa886ee8.png",234],["arrow-right.6bd7ee8b.png",235],["checkbox-unchecked.c0dfd8f5.png",236],["checkbox-checked.93192b5a.png",237],["first-section-bg.33cb64cc.png",238],["red-1.f6dbcaf0.png",239],["red-2.cb7d39ac.png",240],["red-3.5c96b74b.png",241],["red-4.1c4fa1b2.png",242],["map.d1739af0.png",243]]);
+},{}]},{},[335,0], null)
