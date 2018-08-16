@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic");
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif, Arial;
   overflow-x: hidden; }
 
 section {
@@ -80,8 +81,10 @@ p {
         z-index: 1;
         pointer-events: none; }
     .side-pic-container.pic-on-left > div {
+      padding-right: 10px;
       margin-left: 50px; }
   .side-pic-container.pic-on-right {
+    padding-left: 10px;
     text-align: left;
     justify-content: flex-end; }
     .side-pic-container.pic-on-right > .img {
@@ -250,7 +253,7 @@ textarea {
     margin: auto;
     display: flex;
     justify-content: space-around;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 150px; }
     #section-1 .partners-slider img {
       height: auto; }
@@ -666,6 +669,8 @@ textarea {
         width: calc(100% - 10px);
         margin: auto;
         margin-top: 30px; }
+      #section-14 .form-part form textarea {
+        height: 50px; }
       #section-14 .form-part form button.upload-btn {
         margin-top: 30px;
         background-color: #212121;
@@ -682,15 +687,16 @@ textarea {
 #section-15 {
   padding-bottom: 150px; }
   #section-15 h2 {
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-bottom: 10px; }
   #section-15 .wrapper {
-    margin-top: 79px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between; }
     #section-15 .wrapper > div, #section-15 .wrapper > form {
       text-align: center; }
       #section-15 .wrapper > div img, #section-15 .wrapper > form img {
-        margin-bottom: 79px; }
+        margin-bottom: 20px; }
       #section-15 .wrapper > div input, #section-15 .wrapper > div button, #section-15 .wrapper > form input, #section-15 .wrapper > form button {
         width: calc(100% - 80px);
         margin-top: 30px; }
@@ -706,18 +712,19 @@ textarea {
 
 #section-16 {
   background-color: #222424;
-  padding-top: 106px;
+  padding-top: 20px;
   padding-right: 10px;
   width: calc(100% - 10px); }
   #section-16 .img:before {
     display: none; }
   #section-16 h2 {
+    padding-left: 10px;
     max-width: 1280px;
     margin: auto;
-    margin-bottom: 106px; }
+    margin-bottom: 50px; }
   #section-16 p {
     text-align: left;
-    margin-top: 100px;
+    margin-top: 0;
     margin-left: -200px; }
   #section-16 > div > div > form {
     margin-left: -200px;
@@ -730,8 +737,8 @@ textarea {
 #section-17 {
   background-image: url("map.d1739af0.png");
   background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
   #section-17 .container:before {
     content: '';
     position: absolute;
@@ -1051,11 +1058,37 @@ button.upload-btn input[type=file] {
   opacity: 0;
   cursor: pointer; }
 
+@media (max-height: 800px) {
+  #section-2 .mega-checkbox {
+    margin-top: 0 !important; }
+    #section-2 .mega-checkbox label {
+      margin-bottom: 5px; }
+    #section-2 .mega-checkbox * {
+      font-size: 18px !important; }
+  #section-5 h2 {
+    margin-bottom: 0; }
+  #section-5 .thumbs {
+    margin: 0; }
+  #section-5 p {
+    margin: 0; }
+  #section-6 h3 {
+    font-size: 24px !important; }
+  #section-6 p {
+    font-size: 20px !important; }
+  #section-6 input {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important; }
+  #section-12 h2 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 26px;
+    padding-top: 5px; } }
+
 @media (max-height: 660px) {
   .section-hints {
     display: none; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   #main-menu nav {
     top: 100px !important;
     line-height: 28px; }
@@ -1066,6 +1099,10 @@ button.upload-btn input[type=file] {
     top: 10px !important;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px; }
+  .hint {
+    left: 15px !important; } }
+
+@media (max-width: 1200px) {
   #special-for-managers h3 {
     margin-bottom: 0;
     font-size: 20px;
@@ -1080,8 +1117,6 @@ button.upload-btn input[type=file] {
     margin-top: 0; }
   #special-for-managers input[type='submit'] {
     margin-top: 10px; }
-  .hint {
-    left: 10px !important; }
   h2 {
     padding: 15px; }
   .mega-checkbox label {
@@ -1107,7 +1142,9 @@ button.upload-btn input[type=file] {
     word-break: break-word; }
   .side-pic-container {
     flex-wrap: wrap;
-    justify-content: center !important; }
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
     .side-pic-container > * {
       width: 100% !important;
       max-width: 100% !important; }
@@ -1115,8 +1152,12 @@ button.upload-btn input[type=file] {
       text-align: center !important;
       padding-bottom: 50px; }
     .side-pic-container.pic-on-left > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       margin-left: 0 !important; }
     .side-pic-container.pic-on-right > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       margin-right: 0 !important; }
     .side-pic-container p {
       margin: auto; }
@@ -1128,11 +1169,15 @@ button.upload-btn input[type=file] {
         display: none; }
   #section-1 .title {
     margin-top: 0 !important; }
+  #section-2 .glide {
+    margin: auto; }
   #section-2 .glide__track {
     width: 100%; }
   #section-2 h2 {
     margin: 0 !important;
-    line-height: 30px; }
+    line-height: 50px;
+    padding-left: 5px;
+    padding-right: 5px; }
   #section-2 .glide__slides {
     margin-top: 0 !important; }
   #section-2 .red-bg {
@@ -1140,6 +1185,8 @@ button.upload-btn input[type=file] {
     margin-bottom: 0 !important; }
   #section-2 .grey-bg {
     margin-bottom: 0 !important; }
+  #section-2 .thumbs {
+    display: none !important; }
   #section-2 button {
     margin-top: 0 !important; }
   #section-2 h3 {
@@ -1247,7 +1294,8 @@ button.upload-btn input[type=file] {
       margin-top: 15px;
       line-height: 38px; }
     #section-14 p {
-      line-height: 30px; }
+      font-size: 16px !important;
+      line-height: 20px; }
     #section-14 input, #section-14 textarea, #section-14 button {
       margin-top: 5px !important; }
     #section-14 textarea {
@@ -1286,6 +1334,8 @@ button.upload-btn input[type=file] {
       padding-left: 20px;
       margin-left: 0 !important;
       flex-wrap: wrap; }
+      #section-16 > div > div form input {
+        width: 100%; }
       #section-16 > div > div form button {
         width: 100%;
         margin-top: 20px; }
