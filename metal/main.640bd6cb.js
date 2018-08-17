@@ -23144,7 +23144,7 @@ if (screen.width > 1200 && screen.height > 1000 || true) {
 
   ;
 }
-},{"@glidejs/glide":208,"smoothscroll":212,"axios":215}],335:[function(require,module,exports) {
+},{"@glidejs/glide":208,"smoothscroll":212,"axios":215}],173:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -23173,7 +23173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '17991' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '16968' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -23314,5 +23314,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[335,83], null)
+},{}]},{},[173,83], null)
 //# sourceMappingURL=/main.640bd6cb.map
