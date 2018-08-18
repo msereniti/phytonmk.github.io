@@ -25,7 +25,7 @@ h3 {
   text-transform: uppercase; }
 
 p {
-  font-size: 28px; }
+  font-size: 20px; }
 
 .container {
   height: 100%;
@@ -39,7 +39,7 @@ p {
 
 .red-bg {
   background-color: #ca4a52;
-  padding: 42px 27px;
+  padding: 12px 27px;
   font-size: 32px;
   text-transform: uppercase;
   display: inline-block; }
@@ -110,9 +110,9 @@ ul:not(.glide__slides) {
       background-repeat: no-repeat; }
 
 button, input[type='submit'] {
-  padding: 35px 0;
+  padding: 35px 5px;
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 16px;
   color: white;
   border: 0;
   border-radius: 5px;
@@ -137,7 +137,7 @@ button {
 
 input, textarea {
   transition: .3s all;
-  padding: 35px 0;
+  padding: 35px 5px;
   border: 0;
   border-radius: 5px;
   outline: none;
@@ -251,14 +251,14 @@ textarea {
     #section-1 .first-row img {
       max-width: calc(100% - 50px); }
   #section-1 .title {
-    margin: 200px auto 0; }
+    margin: 150px auto 0; }
     #section-1 .title h1 {
       margin-bottom: 45px; }
   #section-1 .partners-slider {
     margin: auto;
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 150px; }
     #section-1 .partners-slider img {
       height: auto; }
@@ -276,25 +276,45 @@ textarea {
   #section-2 .content .super-form {
     text-align: center; }
     #section-2 .content .super-form .step-1 h3 {
-      text-align: left; }
+      text-align: left;
+      display: inline-block;
+      font-weight: normal;
+      vertical-align: middle;
+      padding-left: 30px; }
+    #section-2 .content .super-form .glide__slide > *:not(.step-1) .step-number {
+      float: left;
+      vertical-align: top !important; }
+    #section-2 .content .super-form .glide__slide > *:not(.step-1) h3 {
+      vertical-align: bottom !important;
+      font-size: 23px; }
+      #section-2 .content .super-form .glide__slide > *:not(.step-1) h3 .text-transform-normal {
+        font-size: 19px; }
+    #section-2 .content .super-form .step-2 button, #section-2 .content .super-form .step-4 button {
+      width: 80% !important;
+      float: none !important; }
+    #section-2 .content .super-form .step-4 h3 {
+      padding-left: 0 !important;
+      display: block;
+      width: 100%;
+      margin-top: 0; }
     #section-2 .content .super-form .glide {
       max-width: 520px; }
       #section-2 .content .super-form .glide .step-number {
-        width: 86px;
-        height: 86px;
+        width: 72px;
+        height: 72px;
         background-color: #ca4a52;
         border-radius: 50%;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        font-size: 35px;
+        font-size: 29px;
         vertical-align: middle;
         font-weight: bold; }
       #section-2 .content .super-form .glide h3 {
         display: inline-block;
         font-weight: normal;
         vertical-align: middle;
-        padding-left: 30px; }
+        padding-left: 25px; }
         #section-2 .content .super-form .glide h3 b {
           display: block;
           font-size: 30px; }
@@ -318,7 +338,8 @@ textarea {
         padding-top: 18px;
         padding-bottom: 18px; }
       #section-2 .content .super-form .glide button {
-        width: 80%;
+        width: calc(100% - 18px);
+        float: left;
         margin-top: 30px;
         padding-top: 20px;
         padding-bottom: 20px; }
@@ -335,7 +356,7 @@ textarea {
       margin-left: -50px;
       margin-top: 50px;
       width: 600px;
-      height: 800px;
+      height: 650px;
       background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
       background-size: 18px 18px;
       z-index: 0;
@@ -346,7 +367,7 @@ textarea {
       margin-left: 514px;
       margin-top: 50px;
       width: 0px;
-      height: 800px;
+      height: 650px;
       background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
       background-size: 18px 18px;
       z-index: 0;
@@ -354,7 +375,7 @@ textarea {
     #section-2 .content .thumbs > div {
       margin-bottom: 15px;
       width: calc(292px - 16 * 2px);
-      height: calc(342px - 23 * 2px);
+      height: calc(342px - 40 * 2px);
       padding: 23px 16px; }
       #section-2 .content .thumbs > div:nth-of-type(1) {
         background-image: url("red-1.f6dbcaf0.png"); }
@@ -367,7 +388,7 @@ textarea {
       #section-2 .content .thumbs > div > div {
         border: 3px solid #ffffff;
         width: calc(100% - 20 * 2px);
-        height: calc(100% - 60 * 2px);
+        height: calc(100% - 65 * 2px);
         padding: 60px 20px;
         font-size: 25px;
         text-transform: uppercase;
@@ -379,10 +400,10 @@ textarea {
 #section-3 .img:after {
   content: '';
   position: absolute;
-  margin-left: -150px;
-  margin-top: 200px;
+  margin-left: -25px;
+  margin-top: 25px;
   width: 500px;
-  height: 800px;
+  height: 530px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -391,10 +412,10 @@ textarea {
 #section-3 .img:before {
   content: '';
   position: absolute;
-  margin-left: 314px;
-  margin-top: 200px;
+  margin-left: 439px;
+  margin-top: 25px;
   width: 0px;
-  height: 800px;
+  height: 530px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -422,10 +443,10 @@ textarea {
 #section-4 .img:after {
   content: '';
   position: absolute;
-  margin-left: 230px;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-top: 30px;
   width: 459px;
-  height: 708px;
+  height: 550px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -434,10 +455,10 @@ textarea {
 #section-4 .img:before {
   content: '';
   position: absolute;
-  margin-left: 653px;
-  margin-top: 100px;
+  margin-left: 523px;
+  margin-top: 30px;
   width: 0px;
-  height: 708px;
+  height: 550px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -470,6 +491,8 @@ textarea {
     #section-5 .thumbs > div > img {
       width: 160px; }
     #section-5 .thumbs > div > p {
+      max-width: 200px;
+      margin: auto;
       font-size: 15px; }
 
 #section-6 h2 {
@@ -504,14 +527,14 @@ textarea {
     padding-right: 30px; }
     #section-6 .glide__slide form h3 {
       color: #c64951;
-      font-size: 28px;
+      font-size: 19px;
       text-align: center;
       margin-bottom: 0;
       font-weight: normal; }
     #section-6 .glide__slide form p {
       margin-top: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 16px;
       padding-left: 10px;
       padding-right: 10px; }
     #section-6 .glide__slide form input {
@@ -523,7 +546,10 @@ textarea {
       padding: 15px;
       border: 3px solid #262626; }
     #section-6 .glide__slide form input[type='submit'] {
-      border-width: 0; }
+      border-width: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-weight: normal; }
     #section-6 .glide__slide form small {
       margin-top: 20px;
       color: #AAAAAA;
@@ -829,12 +855,12 @@ textarea {
       #section-14 .form-part form h3 {
         text-align: center;
         color: #c64951;
-        font-size: 48px;
+        font-size: 35px;
         margin-bottom: 0; }
       #section-14 .form-part form p {
         margin-top: 0;
         text-align: center;
-        font-size: 34px;
+        font-size: 24px;
         color: #000000;
         margin-bottom: 0; }
       #section-14 .form-part form input, #section-14 .form-part form textarea {
@@ -842,13 +868,13 @@ textarea {
         border-radius: 3px;
         padding-top: 20px;
         padding-bottom: 20px;
-        padding-left: 0;
-        padding-right: 0;
-        width: calc(100% - 10px);
+        padding-left: 5px;
+        padding-right: 5px;
+        width: calc(100% - 20px);
         margin: auto;
         margin-top: 30px; }
       #section-14 .form-part form textarea {
-        height: 50px; }
+        height: 90px; }
       #section-14 .form-part form button.upload-btn {
         margin-top: 30px;
         background-color: #212121;
@@ -1030,7 +1056,7 @@ footer {
   .section-hints .hint {
     width: 11px;
     height: 20px;
-    left: 69px;
+    left: 10px;
     transition: .3s all;
     cursor: pointer;
     position: relative; }
@@ -1047,8 +1073,8 @@ footer {
 
 #main-menu .button {
   position: fixed;
-  top: 96px;
-  left: 69px;
+  top: 10px;
+  left: 10px;
   z-index: 15;
   cursor: pointer;
   width: 39px;
@@ -1092,13 +1118,13 @@ footer {
         text-decoration: underline; }
 
 #main-menu.visible .button .line:nth-of-type(1) {
-  transform: rotate(135deg) translate(14px, -19px); }
+  transform: rotate(135deg) translate(19px, -19px); }
 
 #main-menu.visible .button .line:nth-of-type(2) {
   opacity: 0; }
 
 #main-menu.visible .button .line:nth-of-type(3) {
-  transform: rotate(-135deg) translate(14px, 19px); }
+  transform: rotate(-135deg) translate(0, 0); }
 
 #main-menu.visible .overlay {
   opacity: 1;
@@ -1119,7 +1145,10 @@ footer {
   justify-content: center;
   align-items: center; }
   .modal-wrapper .modal-container {
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .modal-wrapper .modal-container > * {
       z-index: 1; }
     .modal-wrapper .modal-container:after {
@@ -1131,7 +1160,7 @@ footer {
       height: 708px;
       background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
       background-size: 18px 18px;
-      z-index: 2;
+      z-index: 0;
       pointer-events: none; }
     .modal-wrapper .modal-container:before {
       content: '';
@@ -1142,7 +1171,7 @@ footer {
       height: 708px;
       background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
       background-size: 18px 18px;
-      z-index: 2;
+      z-index: 0;
       pointer-events: none; }
     .modal-wrapper .modal-container .modal {
       max-height: 100%;
@@ -1172,7 +1201,8 @@ footer {
       .modal-wrapper .modal-container .modal input[type=submit] {
         margin-bottom: 40px;
         padding-top: 30px;
-        padding-bottom: 30px; }
+        padding-bottom: 30px;
+        width: calc(100% - 25px); }
       .modal-wrapper .modal-container .modal input {
         margin-top: 30px;
         width: 100%;
@@ -1197,7 +1227,7 @@ footer {
   height: 600px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #contact .modal-container:before {
@@ -1209,7 +1239,7 @@ footer {
   height: 600px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #thanks .modal-container > * {
@@ -1224,7 +1254,7 @@ footer {
   height: 400px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #thanks .modal-container:before {
@@ -1236,7 +1266,7 @@ footer {
   height: 400px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #choise .modal-container > * {
@@ -1251,7 +1281,7 @@ footer {
   height: 500px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #choise .modal-container:before {
@@ -1263,7 +1293,7 @@ footer {
   height: 500px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #model .modal-container > * {
@@ -1278,7 +1308,7 @@ footer {
   height: 500px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #model .modal-container:before {
@@ -1290,7 +1320,7 @@ footer {
   height: 500px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #task-solving .modal-container > * {
@@ -1305,7 +1335,7 @@ footer {
   height: 500px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #task-solving .modal-container:before {
@@ -1317,7 +1347,7 @@ footer {
   height: 500px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none; }
 
 #task-solving .modal {
@@ -1390,16 +1420,7 @@ button.upload-btn input[type=file] {
 @media (max-width: 1400px) {
   #main-menu nav {
     top: 100px !important;
-    line-height: 28px; }
-  #main-menu .button {
-    transform: scale(0.5);
-    transform-origin: left top;
-    left: 10px !important;
-    top: 10px !important;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px; }
-  .hint {
-    left: 15px !important; } }
+    line-height: 28px; } }
 
 @media (max-width: 1200px) {
   #special-for-managers h3 {
