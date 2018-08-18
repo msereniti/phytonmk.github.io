@@ -192,9 +192,9 @@ textarea {
     width: calc(100% - 20px);
     display: block;
     border: 1px solid #686868;
-    padding: 25px 36px;
+    padding: 20px 36px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     color: white;
     transition: .3s all; }
@@ -266,6 +266,9 @@ textarea {
   #section-1 .slider .glide {
     width: calc(100% - 180px); }
 
+#section-2 h2 {
+  margin-bottom: 15px; }
+
 #section-2 .content {
   display: flex;
   flex-wrap: wrap;
@@ -282,12 +285,16 @@ textarea {
         height: 86px;
         background-color: #ca4a52;
         border-radius: 50%;
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
         font-size: 35px;
+        vertical-align: middle;
         font-weight: bold; }
       #section-2 .content .super-form .glide h3 {
+        display: inline-block;
+        font-weight: normal;
+        vertical-align: middle;
         padding-left: 30px; }
         #section-2 .content .super-form .glide h3 b {
           display: block;
