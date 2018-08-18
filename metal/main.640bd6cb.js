@@ -22692,7 +22692,7 @@ document.querySelector('section#section-2 #go-to-step4').addEventListener('click
 
 var constructions = new _glide2.default('section#section-6 .glide', {
   perView: 1,
-  autoplay: false
+  autoplay: clientsOnScreen === 1 ? 3000 : false
 });
 constructions.mount();
 document.querySelectorAll('section#section-6 .tabs > div').forEach(function (tab) {
@@ -22740,11 +22740,26 @@ document.querySelectorAll('section#section-13 .arrow')[0].addEventListener('clic
 document.querySelectorAll('section#section-13 .arrow')[1].addEventListener('click', function () {
   recommendations.go('>');
 });
+var managerOptions = new _glide2.default('section#section-15 .glide', {
+  perView: clientsOnScreen,
+  autoplay: clientsOnScreen === 3 ? false : 3000,
+  keyboard: false
+});
+managerOptions.mount();
+if (clientsOnScreen === 3) managerOptions.disable();
+document.querySelectorAll('section#section-15 input').forEach(function (input) {
+  input.addEventListener('focus', function () {
+    return managerOptions.disable();
+  });
+  if (clientsOnScreen !== 3) input.addEventListener('blur', function () {
+    return managerOptions.enable();
+  });
+});
 
 document.querySelectorAll('.mega-checkbox').forEach(function (container) {
   var input = container.querySelector('input[type="hidden"]');
   container.querySelectorAll('label').forEach(function (checkbox) {
-    checkbox.insertAdjacentHTML('beforeEnd', '<div class="checkbox-flag" style="top: ' + (checkbox.offsetHeight - 36) / 2 + 'px"></div>');
+    checkbox.insertAdjacentHTML('beforeEnd', '<div class="checkbox-flag" style="top: ' + (checkbox.offsetHeight - 24) / 2 + 'px"></div>');
     checkbox.addEventListener('click', function () {
       if (container.getAttribute('checkbox-type') === 'radio') {
         input.value = checkbox.textContent;
@@ -22768,8 +22783,14 @@ document.querySelectorAll('.mega-checkbox').forEach(function (container) {
   });
 });
 
+var openModal = function openModal(modalId) {
+  document.querySelector('#main-menu').classList.add('close-mode');
+  document.querySelector(modalId).classList.add('visible');
+};
+
 var sections = document.querySelectorAll('section');
 var html = document.querySelector('html');
+var footer = document.querySelector('footer');
 // let lastScrollPosition = 0
 var scrollHandler = function scrollHandler() {
   // if (lastScrollPosition < html.scrollTop)
@@ -22777,6 +22798,8 @@ var scrollHandler = function scrollHandler() {
   // else
   //   console.log('scroll up')
   // lastScrollPosition = html.scrollTop
+  if (html.scrollTop < 100) document.querySelector('#nav-arrows .up').classList.remove('visible');else document.querySelector('#nav-arrows .up').classList.add('visible');
+  if (html.scrollTop > footer.offsetTop) document.querySelector('#nav-arrows .down').classList.remove('visible');else document.querySelector('#nav-arrows .down').classList.add('visible');
   document.querySelectorAll('.section-hints > .hint.active').forEach(function (hint) {
     return hint.classList.remove('active');
   });
@@ -22820,6 +22843,7 @@ document.querySelector('#main-menu .button').addEventListener('click', function 
   document.querySelectorAll('.modal-wrapper.visible').forEach(function (wrapper) {
     return wrapper.classList.remove('visible');
   });
+  document.querySelector('#main-menu').classList.remove('close-mode');
 });
 document.querySelector('#main-menu .overlay').addEventListener('click', function () {
   return document.querySelector('#main-menu').classList.remove('visible');
@@ -22827,7 +22851,10 @@ document.querySelector('#main-menu .overlay').addEventListener('click', function
 
 document.querySelectorAll('.modal-wrapper').forEach(function (wrapper) {
   return wrapper.addEventListener('click', function (event) {
-    if (event.target.classList.contains('modal-wrapper')) wrapper.classList.remove('visible');
+    if (event.target.classList.contains('modal-wrapper') || event.target.classList.contains('modal-container')) {
+      document.querySelector('#main-menu').classList.remove('close-mode');
+      wrapper.classList.remove('visible');
+    }
   });
 });
 
@@ -22883,16 +22910,19 @@ document.querySelectorAll('form').forEach(function (form) {
   return form.addEventListener('submit', function (event) {
     event.preventDefault();
     var ok = validateForm(form);
-    if (ok) document.querySelectorAll('.modal-wrapper.visible').forEach(function (modal) {
-      return modal.classList.remove('visible');
-    });
+    if (ok) {
+      document.querySelector('#main-menu').classList.remove('close-mode');
+      document.querySelectorAll('.modal-wrapper.visible').forEach(function (modal) {
+        return modal.classList.remove('visible');
+      });
+    }
     if (form.classList.contains('models-form')) {
       if (ok) {
         document.querySelector('#model input[name=Длина]').value = form.querySelector('input[name=Длина]').value;
         document.querySelector('#model input[name=Ширина]').value = form.querySelector('input[name=Ширина]').value;
         document.querySelector('#model input[name=Высота]').value = form.querySelector('input[name=Высота]').value;
         document.querySelector('#model input[name=Модель]').value = document.querySelector('#section-6 .tabs .active').textContent;
-        document.querySelector('#model').classList.add('visible');
+        openModal('#model');
       }
     } else {
       var data = new FormData();
@@ -22984,7 +23014,7 @@ document.querySelectorAll('form').forEach(function (form) {
 
         console.log('---');
         _axios2.default.post('http://smolnyicentr.ru/metal-email.php', data).then(function (res) {
-          console.log(res.data);document.querySelector('#thanks').classList.add('visible');
+          console.log(res.data);openModal('#thanks');
         }).catch(function (e) {
           console.log(e);alert('Произошла ошибка при отправк формы');
         });
@@ -22993,22 +23023,22 @@ document.querySelectorAll('form').forEach(function (form) {
   });
 });
 document.querySelector('.very-big-button').addEventListener('click', function () {
-  return document.querySelector('#special-for-managers').classList.add('visible');
+  return openModal('#special-for-managers');
 });
 
 document.querySelectorAll('#section-11 button').forEach(function (button) {
   return button.addEventListener('click', function (event) {
     document.querySelector('#task-solving input[type="hidden"]').value = event.target.previousElementSibling.value;
-    document.querySelector('#task-solving').classList.add('visible');
+    openModal('#task-solving');
   });
 });
 
 document.querySelector('.stop-overpay').addEventListener('click', function () {
-  return document.querySelector('#choise').classList.add('visible');
+  return openModal('#choise');
 });
 
 document.querySelector('footer button').addEventListener('click', function () {
-  return document.querySelector('#contact').classList.add('visible');
+  return openModal('#contact');
 });
 
 // document.querySelectorAll('button.upload-btn').forEach(btn => btn.onclick = () => false)
@@ -23072,9 +23102,9 @@ if (screen.width > 1200 && screen.height > 1000 || true) {
   };
 
   document.querySelector('body').style.overflowY = 'hidden';
-  document.querySelectorAll('section').forEach(function (section) {
+  document.querySelectorAll('section, footer').forEach(function (section) {
     section.style.height = screen.height + 'px';
-    section.style.overflowY = 'hidden';
+    section.style.overflowY = 'auto';
   });
 
   var buisy = false;
@@ -23144,6 +23174,31 @@ if (screen.width > 1200 && screen.height > 1000 || true) {
 
   ;
 }
+
+document.querySelector('#nav-arrows .down').addEventListener('click', function () {
+  var lastSection = false;
+  for (var i = 1; i <= sections.length; i++) {
+    var section = sections[i] || document.querySelector('footer');
+    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + screen.height / 2) {
+      if (lastSection || html.scrollTop < 100) {
+        (0, _smoothscroll2.default)(section);
+        break;
+      }
+      lastSection = true;
+    }
+  }
+});
+document.querySelector('#nav-arrows .up').addEventListener('click', function () {
+  var previousSection = sections[0];
+  for (var i = 1; i <= sections.length; i++) {
+    var section = sections[i] || document.querySelector('footer');
+    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + screen.height / 2) {
+      (0, _smoothscroll2.default)(previousSection);
+      break;
+    }
+    previousSection = section;
+  }
+});
 },{"@glidejs/glide":208,"smoothscroll":212,"axios":215}],154:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
