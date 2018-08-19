@@ -23052,131 +23052,132 @@ document.querySelectorAll('button.upload-btn').forEach(function (button) {
   });
 });
 
-if (document.body.clientWidth > 1200 && document.documentElement.clientHeight > 1000 || true) {
-  var handleTouchStart = function handleTouchStart(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
-  };
-
-  var handleTouchMove = function handleTouchMove(evt) {
-    if (!xDown || !yDown) {
-      return;
-    }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if (Math.abs(xDiff) < Math.abs(yDiff)) {
-      /*most significant*/
-      if (yDiff > 0) {
-        if (evt.touches[0].clientY > document.documentElement.clientHeight * 0.8) {
-          var lastSection = false;
-          for (var i = 1; i <= sections.length; i++) {
-            var section = sections[i] || document.querySelector('footer');
-            if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
-              if (lastSection || html.scrollTop < 100) {
-                (0, _smoothscroll2.default)(section);
-                break;
-              }
-              lastSection = true;
-            }
-          }
-        }
-      } else {
-        if (evt.touches[0].clientY < document.documentElement.clientHeight * 0.2) {
-          var previousSection = sections[0];
-          for (var _i2 = 1; _i2 <= sections.length; _i2++) {
-            var _section2 = sections[_i2] || document.querySelector('footer');
-            if (html.scrollTop < 100 || _section2.offsetTop + _section2.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
-              (0, _smoothscroll2.default)(previousSection);
-              break;
-            }
-            previousSection = _section2;
-          }
-        }
-      }
-    }
-    /* reset values */
-    xDown = null;
-    yDown = null;
-  };
-
-  document.querySelector('body').style.overflowY = 'hidden';
+window.onresize = function () {
   document.querySelectorAll('section, footer').forEach(function (section) {
     section.style.height = document.documentElement.clientHeight + 'px';
-    section.style.overflowY = 'auto';
   });
+};
 
-  var buisy = false;
-  document.querySelector('body').addEventListener('wheel', function (event) {
-    if (!buisy) {
-      buisy = true;
-      var down = event.deltaY > 0;
+// if (document.body.clientWidth > 1200 && document.documentElement.clientHeight > 1000 || true) {
+document.querySelector('body').style.overflowY = 'hidden';
+document.querySelectorAll('section, footer').forEach(function (section) {
+  section.style.height = document.documentElement.clientHeight + 'px';
+  section.style.overflowY = 'auto';
+});
+
+var buisy = false;
+document.querySelector('body').addEventListener('wheel', function (event) {
+  if (!buisy) {
+    buisy = true;
+    var down = event.deltaY > 0;
+    var lastSection = false;
+    var previousSection = sections[0];
+    for (var i = 1; i <= sections.length; i++) {
+      var section = sections[i] || document.querySelector('footer');
+      if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+        if (lastSection || html.scrollTop < 100) {
+          (0, _smoothscroll2.default)(section);
+          buisy = false;
+          break;
+        }
+        if (down) {
+          lastSection = true;
+        } else {
+          (0, _smoothscroll2.default)(previousSection);
+          buisy = false;
+          break;
+        }
+      }
+      previousSection = section;
+    }
+    buisy = false;
+  }
+});
+document.querySelector('body').onkeydown = function (event) {
+  if (event.target.tagName !== 'input') {
+    if (event.code === 'ArrowDown' || event.code === 'Space') {
       var lastSection = false;
-      var previousSection = sections[0];
       for (var i = 1; i <= sections.length; i++) {
         var section = sections[i] || document.querySelector('footer');
         if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
           if (lastSection || html.scrollTop < 100) {
             (0, _smoothscroll2.default)(section);
-            buisy = false;
             break;
           }
-          if (down) {
-            lastSection = true;
-          } else {
-            (0, _smoothscroll2.default)(previousSection);
-            buisy = false;
-            break;
-          }
-        }
-        previousSection = section;
-      }
-      buisy = false;
-    }
-  });
-  document.querySelector('body').onkeydown = function (event) {
-    if (event.target.tagName !== 'input') {
-      if (event.code === 'ArrowDown' || event.code === 'Space') {
-        var lastSection = false;
-        for (var i = 1; i <= sections.length; i++) {
-          var section = sections[i] || document.querySelector('footer');
-          if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
-            if (lastSection || html.scrollTop < 100) {
-              (0, _smoothscroll2.default)(section);
-              break;
-            }
-            lastSection = true;
-          }
-        }
-      }
-      if (event.code === 'ArrowUp') {
-        var previousSection = sections[0];
-        for (var _i = 1; _i <= sections.length; _i++) {
-          var _section = sections[_i] || document.querySelector('footer');
-          if (html.scrollTop < 100 || _section.offsetTop + _section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
-            (0, _smoothscroll2.default)(previousSection);
-            break;
-          }
-          previousSection = _section;
+          lastSection = true;
         }
       }
     }
-  };
+    if (event.code === 'ArrowUp') {
+      var previousSection = sections[0];
+      for (var _i = 1; _i <= sections.length; _i++) {
+        var _section = sections[_i] || document.querySelector('footer');
+        if (html.scrollTop < 100 || _section.offsetTop + _section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+          (0, _smoothscroll2.default)(previousSection);
+          break;
+        }
+        previousSection = _section;
+      }
+    }
+  }
+};
 
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleTouchMove, false);
+// document.addEventListener('touchstart', handleTouchStart, false);        
+// document.addEventListener('touchmove', handleTouchMove, false);
 
-  var xDown = null;
-  var yDown = null;
+// var xDown = null;                                                        
+// var yDown = null;                                                        
 
-  ;
+// function handleTouchStart(evt) {                                         
+//     xDown = evt.touches[0].clientX;                                      
+//     yDown = evt.touches[0].clientY;                                      
+// };                                                
 
-  ;
-}
+// function handleTouchMove(evt) {
+//     if ( ! xDown || ! yDown ) {
+//         return;
+//     }
+
+//     var xUp = evt.touches[0].clientX;                                    
+//     var yUp = evt.touches[0].clientY;
+
+//     var xDiff = xDown - xUp;
+//     var yDiff = yDown - yUp;
+
+//     if ( Math.abs( xDiff ) < Math.abs( yDiff ) ) {/*most significant*/                    
+//         if (yDiff > 0) {
+//             if(evt.touches[0].clientY > document.documentElement.clientHeight * 0.8) {
+//               let lastSection = false
+//               for (let i = 1; i <= sections.length; i++) {
+//                 const section = sections[i] || document.querySelector('footer')
+//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (document.documentElement.clientHeight / 2)) {
+//                   if (lastSection || html.scrollTop < 100) {
+//                     smoothScroll(section)
+//                     break
+//                   }
+//                   lastSection = true
+//                 }
+//               }
+//             }
+//         } else { 
+//             if(evt.touches[0].clientY < document.documentElement.clientHeight * 0.2) {
+//               let previousSection = sections[0]
+//               for (let i = 1; i <= sections.length; i++) {
+//                 const section = sections[i] || document.querySelector('footer')
+//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (document.documentElement.clientHeight / 2)) {
+//                   smoothScroll(previousSection)
+//                   break
+//                 }
+//                 previousSection = section
+//               }
+//             }
+//         }                                                                 
+//     }
+//     /* reset values */
+//     xDown = null;
+//     yDown = null;                                             
+// };
+// }
 
 document.querySelector('#nav-arrows .down').addEventListener('click', function () {
   var lastSection = false;
