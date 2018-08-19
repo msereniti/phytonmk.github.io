@@ -23052,11 +23052,11 @@ document.querySelectorAll('button.upload-btn').forEach(function (button) {
   });
 });
 
-window.onresize = function () {
+setInterval(function () {
   document.querySelectorAll('section, footer').forEach(function (section) {
     section.style.height = document.documentElement.clientHeight + 'px';
   });
-};
+}, 4000);
 
 // if (document.body.clientWidth > 1200 && document.documentElement.clientHeight > 1000 || true) {
 document.querySelector('body').style.overflowY = 'hidden';
