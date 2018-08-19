@@ -173,6 +173,12 @@ textarea {
   resize: none;
   height: 170px; }
 
+input[type=submit] {
+  border-radius: 3px !important;
+  background-image: none !important;
+  background-color: #c64951 !important;
+  background: #c64951 !important; }
+
 .slider {
   display: flex; }
   .slider .glide {

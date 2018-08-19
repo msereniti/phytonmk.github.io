@@ -22814,7 +22814,7 @@ var scrollHandler = function scrollHandler() {
     for (var _iterator = sections[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var section = _step.value;
 
-      if (section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+      if (section.offsetTop + section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
         document.querySelector('.section-hints > .hint[data-section="' + section.getAttribute('id').replace('section-', '') * 1 + '"]').classList.add('active');
         break;
       }
@@ -23054,14 +23054,14 @@ document.querySelectorAll('button.upload-btn').forEach(function (button) {
 
 setInterval(function () {
   document.querySelectorAll('section, footer').forEach(function (section) {
-    section.style.height = document.documentElement.clientHeight + 'px';
+    section.style.height = window.innerHeight + 'px';
   });
-}, 4000);
+}, 500);
 
-// if (document.body.clientWidth > 1200 && document.documentElement.clientHeight > 1000 || true) {
+// if (document.body.clientWidth > 1200 && window.innerHeight > 1000 || true) {
 document.querySelector('body').style.overflowY = 'hidden';
 document.querySelectorAll('section, footer').forEach(function (section) {
-  section.style.height = document.documentElement.clientHeight + 'px';
+  section.style.height = window.innerHeight + 'px';
   section.style.overflowY = 'auto';
 });
 
@@ -23074,7 +23074,7 @@ document.querySelector('body').addEventListener('wheel', function (event) {
     var previousSection = sections[0];
     for (var i = 1; i <= sections.length; i++) {
       var section = sections[i] || document.querySelector('footer');
-      if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+      if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
         if (lastSection || html.scrollTop < 100) {
           (0, _smoothscroll2.default)(section);
           buisy = false;
@@ -23099,7 +23099,7 @@ document.querySelector('body').onkeydown = function (event) {
       var lastSection = false;
       for (var i = 1; i <= sections.length; i++) {
         var section = sections[i] || document.querySelector('footer');
-        if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+        if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
           if (lastSection || html.scrollTop < 100) {
             (0, _smoothscroll2.default)(section);
             break;
@@ -23112,7 +23112,7 @@ document.querySelector('body').onkeydown = function (event) {
       var previousSection = sections[0];
       for (var _i = 1; _i <= sections.length; _i++) {
         var _section = sections[_i] || document.querySelector('footer');
-        if (html.scrollTop < 100 || _section.offsetTop + _section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+        if (html.scrollTop < 100 || _section.offsetTop + _section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
           (0, _smoothscroll2.default)(previousSection);
           break;
         }
@@ -23146,11 +23146,11 @@ document.querySelector('body').onkeydown = function (event) {
 
 //     if ( Math.abs( xDiff ) < Math.abs( yDiff ) ) {/*most significant*/                    
 //         if (yDiff > 0) {
-//             if(evt.touches[0].clientY > document.documentElement.clientHeight * 0.8) {
+//             if(evt.touches[0].clientY > window.innerHeight * 0.8) {
 //               let lastSection = false
 //               for (let i = 1; i <= sections.length; i++) {
 //                 const section = sections[i] || document.querySelector('footer')
-//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (document.documentElement.clientHeight / 2)) {
+//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (window.innerHeight / 2)) {
 //                   if (lastSection || html.scrollTop < 100) {
 //                     smoothScroll(section)
 //                     break
@@ -23160,11 +23160,11 @@ document.querySelector('body').onkeydown = function (event) {
 //               }
 //             }
 //         } else { 
-//             if(evt.touches[0].clientY < document.documentElement.clientHeight * 0.2) {
+//             if(evt.touches[0].clientY < window.innerHeight * 0.2) {
 //               let previousSection = sections[0]
 //               for (let i = 1; i <= sections.length; i++) {
 //                 const section = sections[i] || document.querySelector('footer')
-//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (document.documentElement.clientHeight / 2)) {
+//                 if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + (window.innerHeight / 2)) {
 //                   smoothScroll(previousSection)
 //                   break
 //                 }
@@ -23183,7 +23183,7 @@ document.querySelector('#nav-arrows .down').addEventListener('click', function (
   var lastSection = false;
   for (var i = 1; i <= sections.length; i++) {
     var section = sections[i] || document.querySelector('footer');
-    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
       if (lastSection || html.scrollTop < 100) {
         (0, _smoothscroll2.default)(section);
         break;
@@ -23196,7 +23196,7 @@ document.querySelector('#nav-arrows .up').addEventListener('click', function () 
   var previousSection = sections[0];
   for (var i = 1; i <= sections.length; i++) {
     var section = sections[i] || document.querySelector('footer');
-    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + document.documentElement.clientHeight / 2) {
+    if (html.scrollTop < 100 || section.offsetTop + section.offsetHeight > html.scrollTop + window.innerHeight / 2) {
       (0, _smoothscroll2.default)(previousSection);
       break;
     }
