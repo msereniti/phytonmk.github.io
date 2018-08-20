@@ -956,7 +956,7 @@ input[type=submit] {
 #section-13 {
   padding-bottom: 100px; }
   #section-13 h2 {
-    margin-top: 50px;
+    margin-left: 60px;
     margin-bottom: 50px; }
   #section-13 img {
     max-height: 500px; }
@@ -1104,6 +1104,7 @@ input[type=submit] {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 100%; }
   #section-15 .wrapper li > div, #section-15 .wrapper li > form {
     max-width: 295px;
