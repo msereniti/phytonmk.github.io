@@ -22952,7 +22952,7 @@ document.querySelectorAll('form').forEach(function (form) {
     } else {
       var data = new FormData();
       if (form.querySelector('input[name=Модель]')) {
-        var modelForm = document.querySelector = document.querySelectorAll('#section-6')[document.querySelector('#model').getAttribute('model-form-id')];
+        var modelForm = document.querySelectorAll('#section-6 form')[document.querySelector('#model').getAttribute('model-form-id') * 1];
         var _iteratorNormalCompletion3 = true;
         var _didIteratorError3 = false;
         var _iteratorError3 = undefined;
@@ -22978,6 +22978,10 @@ document.querySelectorAll('form').forEach(function (form) {
               throw _iteratorError3;
             }
           }
+        }
+
+        if (modelForm.querySelector('button.upload-btn input[type=file]') !== null) {
+          data.append('attachment', modelForm.querySelector('button.upload-btn input[type=file]').files[0]);
         }
       }
       data.append('Форма отправки', form.getAttribute('name'));
@@ -23142,9 +23146,18 @@ document.querySelector('body').addEventListener('wheel', function (event) {
     buisy = false;
   }
 });
+var inputFocus = false;
+document.querySelectorAll('input, textarea').forEach(function (input) {
+  input.addEventListener('focus', function () {
+    return inputFocus = true;
+  });
+  input.addEventListener('blur', function () {
+    return inputFocus = false;
+  });
+});
 document.querySelector('body').onkeydown = function (event) {
   if (event.target.tagName !== 'input') {
-    if (event.code === 'ArrowDown' || event.code === 'Space') {
+    if ((event.code === 'ArrowDown' || event.code === 'Space') && !inputFocus) {
       var lastSection = false;
       for (var i = 1; i <= sections.length; i++) {
         var section = sections[i] || document.querySelector('footer');
@@ -23157,7 +23170,7 @@ document.querySelector('body').onkeydown = function (event) {
         }
       }
     }
-    if (event.code === 'ArrowUp') {
+    if (event.code === 'ArrowUp' && !inputFocus) {
       var previousSection = sections[0];
       for (var _i = 1; _i <= sections.length; _i++) {
         var _section = sections[_i] || document.querySelector('footer');

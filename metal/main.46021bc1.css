@@ -582,7 +582,7 @@ input[type=submit] {
   padding: 20px 30px; }
 
 #section-5 h2 {
-  margin-top: 60px; }
+  margin-left: 60px; }
 
 #section-5 .thumbs {
   margin-top: 40px;
@@ -711,7 +711,7 @@ input[type=submit] {
   margin-left: -395px;
   margin-top: 100px;
   width: 228px;
-  height: 528px;
+  height: 408px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
   z-index: 2;
@@ -723,7 +723,7 @@ input[type=submit] {
   margin-left: -203px;
   margin-top: 100px;
   width: 142px;
-  height: 528px;
+  height: 408px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 2;
@@ -1672,6 +1672,13 @@ button.upload-btn input[type=file] {
   #section-6 input {
     padding-top: 15px !important;
     padding-bottom: 15px !important; }
+  #section-6 .img-container {
+    display: none !important; }
+  #section-6 .glide__slide {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 10px !important; }
   #section-12 h2 {
     margin: 0;
     font-size: 26px;
@@ -1947,6 +1954,7 @@ button.upload-btn input[type=file] {
     #section-15 .container .wrapper {
       margin-top: 0;
       flex-wrap: wrap;
+      align-items: center;
       height: 100%;
       overflow-y: auto; }
       #section-15 .container .wrapper img {
