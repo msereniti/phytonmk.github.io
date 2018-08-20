@@ -22727,8 +22727,10 @@ var cases = new _glide2.default('section#section-11 .glide', {
 cases.mount();
 document.querySelectorAll('section#section-1 .glide__slide').forEach(function (slide) {
   return slide.addEventListener('click', function () {
-    cases.go('=' + slide.getAttribute('case-index'));
-    (0, _smoothscroll2.default)(document.querySelector('section#section-11'));
+    if (slide.getAttribute('case-index')) {
+      cases.go('=' + slide.getAttribute('case-index'));
+      (0, _smoothscroll2.default)(document.querySelector('section#section-11'));
+    }
   });
 });
 document.querySelectorAll('section#section-11 .dots > .dot').forEach(function (dot) {
@@ -22744,7 +22746,7 @@ cases.on('move', function (event) {
 });
 
 var recommendations = new _glide2.default('section#section-13 .glide', {
-  perView: clientsOnScreen,
+  perView: clientsOnScreen === 3 ? 2 : 1,
   keyboard: true,
   autoplay: 9000
 });
