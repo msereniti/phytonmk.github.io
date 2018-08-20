@@ -55,7 +55,8 @@ b {
   background-position: left center;
   font-size: 16px;
   line-height: 20px;
-  padding-top: 13px;
+  padding-top: 5px;
+  height: 49px;
   padding-right: 10px;
   font-weight: normal;
   color: #CCC; }
@@ -466,7 +467,9 @@ input[type=submit] {
       margin-bottom: 15px;
       width: calc(244px - 16 * 2px);
       height: calc(286px - 23 * 2px);
-      padding: 23px 16px; }
+      padding: 23px 16px;
+      background-repeat: no-repeat;
+      background-size: cover; }
       #section-2 .content .thumbs > div:nth-of-type(1) {
         background-image: url("red-1.f6dbcaf0.png"); }
       #section-2 .content .thumbs > div:nth-of-type(2) {
@@ -476,6 +479,8 @@ input[type=submit] {
       #section-2 .content .thumbs > div:nth-of-type(4) {
         background-image: url("red-4.1c4fa1b2.png"); }
       #section-2 .content .thumbs > div > div {
+        opacity: 0;
+        transition: .3s all;
         border: 3px solid #ffffff;
         width: calc(100% - 20 * 2px);
         height: calc(100% - 60 * 2px);
@@ -483,6 +488,17 @@ input[type=submit] {
         font-size: 25px;
         text-transform: uppercase;
         text-align: center; }
+      #section-2 .content .thumbs > div:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #8a2229;
+        opacity: 0; }
+      #section-2 .content .thumbs > div:hover:before, #section-2 .content .thumbs > div:hover > div {
+        opacity: .85; }
 
 #section-3 .img > * {
   z-index: 1; }
@@ -566,7 +582,7 @@ input[type=submit] {
   padding: 20px 30px; }
 
 #section-5 h2 {
-  margin-top: 40px; }
+  margin-top: 60px; }
 
 #section-5 .thumbs {
   margin-top: 40px;
@@ -618,10 +634,21 @@ input[type=submit] {
 
 #section-6 .glide__slide {
   display: flex;
-  justify-content: flex-start; }
-  #section-6 .glide__slide img {
+  justify-content: flex-start;
+  margin-right: 30px;
+  margin-left: 30px; }
+  #section-6 .glide__slide .img-container {
     margin-left: 20px;
-    margin-right: 200px; }
+    margin-right: 200px;
+    background-color: white;
+    width: calc(50% - 200px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px; }
+    #section-6 .glide__slide .img-container img {
+      max-width: 100%; }
   #section-6 .glide__slide form {
     max-width: 400px; }
     #section-6 .glide__slide form h3 {
@@ -638,7 +665,9 @@ input[type=submit] {
       padding-left: 10px;
       padding-right: 10px;
       line-height: 20px; }
-    #section-6 .glide__slide form input {
+    #section-6 .glide__slide form .mega-checkbox label {
+      font-size: 16px; }
+    #section-6 .glide__slide form input, #section-6 .glide__slide form textarea, #section-6 .glide__slide form .upload-btn {
       display: block;
       max-width: 100%;
       width: 100%;
@@ -666,69 +695,71 @@ input[type=submit] {
 
 #section-7 > div > div {
   max-width: 666px;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  padding-top: 200px; }
   #section-7 > div > div h2 {
     margin-top: 41px; }
   #section-7 > div > div p {
     margin-top: 41px; }
 
-#section-7 .img {
-  align-items: flex-start; }
-  #section-7 .img > * {
-    z-index: 1; }
-  #section-7 .img:after {
-    content: '';
-    position: absolute;
-    margin-left: -395px;
-    margin-top: 100px;
-    width: 228px;
-    height: 528px;
-    background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
-  #section-7 .img:before {
-    content: '';
-    position: absolute;
-    margin-left: -203px;
-    margin-top: 100px;
-    width: 142px;
-    height: 528px;
-    background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
+#section-7 .img > * {
+  z-index: 1; }
+
+#section-7 .img:after {
+  content: '';
+  position: absolute;
+  margin-left: -395px;
+  margin-top: 100px;
+  width: 228px;
+  height: 528px;
+  background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
+
+#section-7 .img:before {
+  content: '';
+  position: absolute;
+  margin-left: -203px;
+  margin-top: 100px;
+  width: 142px;
+  height: 528px;
+  background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
 
 #section-8 > div > div {
   max-width: 666px;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  padding-top: 200px; }
 
-#section-8 .img {
-  align-items: flex-start; }
-  #section-8 .img > * {
-    z-index: 1; }
-  #section-8 .img:before {
-    content: '';
-    position: absolute;
-    margin-left: 153px;
-    margin-top: 50px;
-    width: 150px;
-    height: 500px;
-    background: radial-gradient(white 1px, transparent 1.9px) repeat 7px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
-  #section-8 .img:after {
-    content: '';
-    position: absolute;
-    margin-left: 293px;
-    margin-top: 50px;
-    width: 100px;
-    height: 500px;
-    background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
+#section-8 .img > * {
+  z-index: 1; }
+
+#section-8 .img:before {
+  content: '';
+  position: absolute;
+  margin-left: 153px;
+  margin-top: 50px;
+  width: 150px;
+  height: 500px;
+  background: radial-gradient(white 1px, transparent 1.9px) repeat 7px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
+
+#section-8 .img:after {
+  content: '';
+  position: absolute;
+  margin-left: 293px;
+  margin-top: 50px;
+  width: 100px;
+  height: 500px;
+  background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
 
 #section-8 p {
   margin-top: 141px; }
@@ -736,38 +767,39 @@ input[type=submit] {
 #section-9 p {
   max-width: 673px; }
 
-#section-9 .img {
-  align-items: flex-start; }
-  #section-9 .img > * {
-    z-index: 1; }
-  #section-9 .img:after {
-    content: '';
-    position: absolute;
-    margin-left: -345px;
-    margin-top: 100px;
-    width: 228px;
-    height: 428px;
-    background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
-  #section-9 .img:before {
-    content: '';
-    position: absolute;
-    margin-left: -153px;
-    margin-top: 100px;
-    width: 142px;
-    height: 428px;
-    background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
-    background-size: 18px 18px;
-    z-index: 2;
-    pointer-events: none; }
+#section-9 .img > * {
+  z-index: 1; }
+
+#section-9 .img:after {
+  content: '';
+  position: absolute;
+  margin-left: -345px;
+  margin-top: 100px;
+  width: 228px;
+  height: 428px;
+  background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
+
+#section-9 .img:before {
+  content: '';
+  position: absolute;
+  margin-left: -153px;
+  margin-top: 100px;
+  width: 142px;
+  height: 428px;
+  background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
+  background-size: 18px 18px;
+  z-index: 2;
+  pointer-events: none; }
 
 #section-9 p {
   margin-top: 41px;
   max-width: 400px; }
 
 #section-9 > div > div {
+  padding-top: 200px;
   justify-content: flex-start;
   max-width: 666px; }
 
@@ -807,6 +839,23 @@ input[type=submit] {
 #section-10 p {
   max-width: 400px;
   margin-top: 141px; }
+
+#section-11 .dots {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #section-11 .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid white;
+    margin: 10px;
+    transition: .3s all;
+    cursor: pointer; }
+    #section-11 .dots .dot.active {
+      background-color: #c64951; }
 
 #section-11 .glide__slide {
   margin-right: 20px !important; }
@@ -1177,6 +1226,7 @@ input[type=submit] {
       height: 100px; }
 
 footer {
+  overflow-x: hidden;
   padding-top: 69px;
   padding-bottom: 69px; }
   footer .container {
@@ -1195,11 +1245,14 @@ footer {
       margin-top: 24px; }
     footer .container p {
       font-size: 19px;
-      margin-top: 2px; }
+      margin-top: 2px;
+      line-height: 35px; }
       footer .container p.big-p {
         font-size: 28px; }
-    footer .container .tel-link {
-      font-size: 36px; }
+    footer .container h3 {
+      padding-top: 30px; }
+      footer .container h3 .tel-link {
+        font-size: 36px; }
     footer .container .black-box-wrapper > * {
       z-index: 1; }
     footer .container .black-box-wrapper:before {
@@ -1231,7 +1284,7 @@ footer {
       width: 100%;
       height: 411px;
       line-height: 50px;
-      font-size: 24px; }
+      font-size: 18px; }
       footer .container .black-box-wrapper .black-box span {
         color: #a5a4a4; }
 
@@ -1341,42 +1394,22 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .modal-wrapper .modal-container > * {
-      z-index: 1; }
-    .modal-wrapper .modal-container:after {
-      content: '';
-      position: absolute;
-      margin-left: 100px;
-      margin-top: 100px;
-      width: 459px;
-      height: 708px;
-      background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
-      background-size: 18px 18px;
-      z-index: 0;
-      pointer-events: none; }
-    .modal-wrapper .modal-container:before {
-      content: '';
-      position: absolute;
-      margin-left: 523px;
-      margin-top: 100px;
-      width: 0px;
-      height: 708px;
-      background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
-      background-size: 18px 18px;
-      z-index: 0;
-      pointer-events: none; }
     .modal-wrapper .modal-container .modal {
       max-height: 100%;
       overflow-y: auto;
       background-color: #333333;
       padding: 20px 30px;
       text-align: center;
-      max-width: 310px; }
+      max-width: 249px; }
       .modal-wrapper .modal-container .modal h3 {
+        font-weight: bold;
         font-size: 16px;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 5px;
         color: #ca4a52; }
       .modal-wrapper .modal-container .modal p {
-        font-size: 13px; }
+        font-size: 14px; }
       .modal-wrapper .modal-container .modal .big-icon {
         height: 124px;
         width: calc(100% + 60px);
@@ -1419,10 +1452,10 @@ footer {
 #contact .modal-container:after {
   content: '';
   position: absolute;
-  margin-left: 230px;
-  margin-top: 100px;
-  width: 459px;
-  height: 600px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 340px;
+  height: 400px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1431,10 +1464,10 @@ footer {
 #contact .modal-container:before {
   content: '';
   position: absolute;
-  margin-left: 653px;
-  margin-top: 100px;
+  margin-left: 314px;
+  margin-top: 10px;
   width: 0px;
-  height: 600px;
+  height: 400px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1446,9 +1479,9 @@ footer {
 #thanks .modal-container:after {
   content: '';
   position: absolute;
-  margin-left: 50px;
-  margin-top: 100px;
-  width: 459px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 300px;
   height: 400px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
@@ -1458,8 +1491,8 @@ footer {
 #thanks .modal-container:before {
   content: '';
   position: absolute;
-  margin-left: 473px;
-  margin-top: 100px;
+  margin-left: 274px;
+  margin-top: 10px;
   width: 0px;
   height: 400px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
@@ -1473,10 +1506,10 @@ footer {
 #choise .modal-container:after {
   content: '';
   position: absolute;
-  margin-left: 130px;
-  margin-top: 200px;
-  width: 459px;
-  height: 500px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 330px;
+  height: 600px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1485,10 +1518,10 @@ footer {
 #choise .modal-container:before {
   content: '';
   position: absolute;
-  margin-left: 553px;
-  margin-top: 200px;
+  margin-left: 304px;
+  margin-top: 10px;
   width: 0px;
-  height: 500px;
+  height: 600px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1503,10 +1536,10 @@ footer {
 #model .modal-container:after {
   content: '';
   position: absolute;
-  margin-left: 50px;
-  margin-top: 200px;
-  width: 459px;
-  height: 500px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 330px;
+  height: 600px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1515,10 +1548,10 @@ footer {
 #model .modal-container:before {
   content: '';
   position: absolute;
-  margin-left: 473px;
-  margin-top: 200px;
+  margin-left: 304px;
+  margin-top: 10px;
   width: 0px;
-  height: 500px;
+  height: 600px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1533,10 +1566,10 @@ footer {
 #task-solving .modal-container:after {
   content: '';
   position: absolute;
-  margin-left: 150px;
-  margin-top: 200px;
-  width: 459px;
-  height: 500px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 330px;
+  height: 480px;
   background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1545,10 +1578,10 @@ footer {
 #task-solving .modal-container:before {
   content: '';
   position: absolute;
-  margin-left: 573px;
-  margin-top: 200px;
+  margin-left: 304px;
+  margin-top: 10px;
   width: 0px;
-  height: 500px;
+  height: 480px;
   background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
   background-size: 18px 18px;
   z-index: 0;
@@ -1558,14 +1591,43 @@ footer {
   width: calc(100% - 10px) !important; }
 
 #task-solving .modal {
-  max-width: 450px; }
+  max-width: 249px; }
   #task-solving .modal .big-icon {
-    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
     padding: 30px;
     width: 100%; }
 
+#special-for-managers .modal {
+  max-width: 330px; }
+
+#special-for-managers .modal-container > * {
+  z-index: 1; }
+
+#special-for-managers .modal-container:after {
+  content: '';
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 420px;
+  height: 780px;
+  background: radial-gradient(#515151 1px, transparent 1.9px) repeat 7px 0;
+  background-size: 18px 18px;
+  z-index: 0;
+  pointer-events: none; }
+
 #special-for-managers .modal-container:before {
-  display: none; }
+  content: '';
+  position: absolute;
+  margin-left: 394px;
+  margin-top: 10px;
+  width: 0px;
+  height: 780px;
+  background: radial-gradient(white 1px, transparent 1.9px) repeat 10px 0;
+  background-size: 18px 18px;
+  z-index: 0;
+  pointer-events: none; }
 
 #special-for-managers .big-icon {
   padding: 30px;
@@ -1717,6 +1779,8 @@ button.upload-btn input[type=file] {
     background-size: 18px 18px;
     z-index: 0;
     pointer-events: none; }
+  #section-1 .slider img {
+    max-width: 200px; }
   #section-1 .title {
     margin-top: 0 !important; }
   #section-2 .glide {
@@ -1796,7 +1860,7 @@ button.upload-btn input[type=file] {
   #section-9 p, #section-10 p {
     margin-top: 10px;
     font-size: 20px; }
-  #section-10 .side-pic-container > div {
+  #section-7 .side-pic-container > div, #section-8 .side-pic-container > div, #section-9 .side-pic-container > div, #section-10 .side-pic-container > div {
     padding-top: 10px;
     align-items: center;
     padding-bottom: 0; }

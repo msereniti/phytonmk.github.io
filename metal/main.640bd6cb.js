@@ -22710,7 +22710,7 @@ constructions.on('move', function (event) {
   });
   document.querySelectorAll('section#section-6 .tabs > div')[constructions._i].classList.add('active');
 });
-document.querySelectorAll('section#section-6 input').forEach(function (input) {
+document.querySelectorAll('section#section-6 input, section#section-6 textarea').forEach(function (input) {
   input.addEventListener('focus', function () {
     return constructions.disable();
   });
@@ -22721,7 +22721,8 @@ document.querySelectorAll('section#section-6 input').forEach(function (input) {
 
 var cases = new _glide2.default('section#section-11 .glide', {
   perView: 1,
-  autoplay: false
+  autoplay: false,
+  activeNav: true
 });
 cases.mount();
 document.querySelectorAll('section#section-1 .glide__slide').forEach(function (slide) {
@@ -22729,6 +22730,17 @@ document.querySelectorAll('section#section-1 .glide__slide').forEach(function (s
     cases.go('=' + slide.getAttribute('case-index'));
     (0, _smoothscroll2.default)(document.querySelector('section#section-11'));
   });
+});
+document.querySelectorAll('section#section-11 .dots > .dot').forEach(function (dot) {
+  return dot.addEventListener('click', function () {
+    cases.go('=' + dot.getAttribute('case-index'));
+  });
+});
+cases.on('move', function (event) {
+  document.querySelectorAll('section#section-11 .dots > .dot').forEach(function (dot) {
+    return dot.classList.remove('active');
+  });
+  document.querySelectorAll('section#section-11 .dots > .dot')[cases._i].classList.add('active');
 });
 
 var recommendations = new _glide2.default('section#section-13 .glide', {
@@ -22921,55 +22933,68 @@ document.querySelectorAll('form').forEach(function (form) {
     }
     if (form.classList.contains('models-form')) {
       if (ok) {
-        document.querySelector('#model input[name=Длина]').value = form.querySelector('input[name=Длина]').value;
-        document.querySelector('#model input[name=Ширина]').value = form.querySelector('input[name=Ширина]').value;
-        document.querySelector('#model input[name=Высота]').value = form.querySelector('input[name=Высота]').value;
-        document.querySelector('#model input[name=Модель]').value = document.querySelector('#section-6 .tabs .active').textContent;
+        // document.querySelector('#model input[name=Длина]').value = form.querySelector('input[name=Длина]').value
+        // document.querySelector('#model input[name=Ширина]').value = form.querySelector('input[name=Ширина]').value
+        // document.querySelector('#model input[name=Высота]').value = form.querySelector('input[name=Высота]').value
+        var modelFormId = 0;
+        var tabs = document.querySelectorAll('#section-6 .tabs > div');
+        console.log(tabs);
+        for (var i in tabs) {
+          if (tabs[i].classList.contains('active')) {
+            modelFormId = i;
+            break;
+          }
+        }
+        document.querySelector('#model input[name=Модель]').value = tabs[modelFormId].textContent;
+        document.querySelector('#model').setAttribute('model-form-id', modelFormId);
         openModal('#model');
       }
     } else {
       var data = new FormData();
+      if (form.querySelector('input[name=Модель]')) {
+        var modelForm = document.querySelector = document.querySelectorAll('#section-6')[document.querySelector('#model').getAttribute('model-form-id')];
+        var _iteratorNormalCompletion3 = true;
+        var _didIteratorError3 = false;
+        var _iteratorError3 = undefined;
+
+        try {
+          for (var _iterator3 = modelForm.querySelectorAll('input[type=text], input[type=hidden], textarea')[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+            var input = _step3.value;
+
+            if (input.getAttribute('type') !== 'submit') {
+              data.append(input.getAttribute('name'), input.value);
+            }
+          }
+        } catch (err) {
+          _didIteratorError3 = true;
+          _iteratorError3 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion3 && _iterator3.return) {
+              _iterator3.return();
+            }
+          } finally {
+            if (_didIteratorError3) {
+              throw _iteratorError3;
+            }
+          }
+        }
+      }
       data.append('Форма отправки', form.getAttribute('name'));
       if (form.querySelector('button.upload-btn input[type=file]') !== null) {
         data.append('attachment', form.querySelector('button.upload-btn input[type=file]').files[0]);
       }
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = form.querySelectorAll('input[type=text], input[type=hidden], textarea')[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var input = _step3.value;
-
-          if (input.getAttribute('type') !== 'submit') {
-            data.append(input.getAttribute('name'), input.value);
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
-
-      var params = location.search.split(/[?&]/);
       var _iteratorNormalCompletion4 = true;
       var _didIteratorError4 = false;
       var _iteratorError4 = undefined;
 
       try {
-        for (var _iterator4 = params[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-          var param = _step4.value;
+        for (var _iterator4 = form.querySelectorAll('input[type=text], input[type=hidden], textarea')[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var _input = _step4.value;
 
-          if (param.substr(0, 3).toLowerCase() === 'utm') data.append(param.substr(0, param.indexOf('=')), param.substr(param.indexOf('=') + 1));
+          if (_input.getAttribute('type') !== 'submit') {
+            data.append(_input.getAttribute('name'), _input.value);
+          }
         }
       } catch (err) {
         _didIteratorError4 = true;
@@ -22986,36 +23011,60 @@ document.querySelectorAll('form').forEach(function (form) {
         }
       }
 
+      var params = location.search.split(/[?&]/);
+      var _iteratorNormalCompletion5 = true;
+      var _didIteratorError5 = false;
+      var _iteratorError5 = undefined;
+
+      try {
+        for (var _iterator5 = params[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          var param = _step5.value;
+
+          if (param.substr(0, 3).toLowerCase() === 'utm') data.append(param.substr(0, param.indexOf('=')), param.substr(param.indexOf('=') + 1));
+        }
+      } catch (err) {
+        _didIteratorError5 = true;
+        _iteratorError5 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+            _iterator5.return();
+          }
+        } finally {
+          if (_didIteratorError5) {
+            throw _iteratorError5;
+          }
+        }
+      }
+
       data.append('page', location.host + location.pathname);
       console.log(ok);
       if (ok) {
-        console.log('---');
-        var _iteratorNormalCompletion5 = true;
-        var _didIteratorError5 = false;
-        var _iteratorError5 = undefined;
+        var _iteratorNormalCompletion6 = true;
+        var _didIteratorError6 = false;
+        var _iteratorError6 = undefined;
 
         try {
-          for (var _iterator5 = data[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-            var p = _step5.value;
+          for (var _iterator6 = data[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+            var p = _step6.value;
 
             console.log(p);
           }
         } catch (err) {
-          _didIteratorError5 = true;
-          _iteratorError5 = err;
+          _didIteratorError6 = true;
+          _iteratorError6 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion5 && _iterator5.return) {
-              _iterator5.return();
+            if (!_iteratorNormalCompletion6 && _iterator6.return) {
+              _iterator6.return();
             }
           } finally {
-            if (_didIteratorError5) {
-              throw _iteratorError5;
+            if (_didIteratorError6) {
+              throw _iteratorError6;
             }
           }
         }
 
-        console.log('---');
         _axios2.default.post('http://smolnyicentr.ru/metal-email.php', data).then(function (res) {
           console.log(res.data);openModal('#thanks');
         }).catch(function (e) {
@@ -23053,18 +23102,18 @@ document.querySelectorAll('button.upload-btn').forEach(function (button) {
 });
 
 setInterval(function () {
-  document.querySelectorAll('section, footer').forEach(function (section) {
+  document.querySelectorAll('section').forEach(function (section) {
     section.style.height = window.innerHeight + 'px';
   });
 }, 500);
 
 // if (document.body.clientWidth > 1200 && window.innerHeight > 1000 || true) {
 document.querySelector('body').style.overflowY = 'hidden';
-document.querySelectorAll('section, footer').forEach(function (section) {
+document.querySelectorAll('section').forEach(function (section) {
   section.style.height = window.innerHeight + 'px';
   section.style.overflowY = 'auto';
 });
-
+footer.style.overflowY = 'auto';
 var buisy = false;
 document.querySelector('body').addEventListener('wheel', function (event) {
   if (!buisy) {
@@ -23122,27 +23171,25 @@ document.querySelector('body').onkeydown = function (event) {
   }
 };
 
-// document.addEventListener('touchstart', handleTouchStart, false);        
-// document.addEventListener('touchmove', handleTouchMove, false);
+// document.addEventListener('touchstart', handleTouchStart, false)
+// document.addEventListener('touchmove', handleTouchMove, false)
 
-// var xDown = null;                                                        
-// var yDown = null;                                                        
-
+// var xDown = null
+// var yDown = null
 // function handleTouchStart(evt) {                                         
-//     xDown = evt.touches[0].clientX;                                      
-//     yDown = evt.touches[0].clientY;                                      
-// };                                                
-
+//     xDown = evt.touches[0].clientX
+//     yDown = evt.touches[0].clientY
+// }
 // function handleTouchMove(evt) {
 //     if ( ! xDown || ! yDown ) {
-//         return;
+//         return
 //     }
 
-//     var xUp = evt.touches[0].clientX;                                    
-//     var yUp = evt.touches[0].clientY;
+//     var xUp = evt.touches[0].clientX
+//     var yUp = evt.touches[0].clientY
 
-//     var xDiff = xDown - xUp;
-//     var yDiff = yDown - yUp;
+//     var xDiff = xDown - xUp
+//     var yDiff = yDown - yUp
 
 //     if ( Math.abs( xDiff ) < Math.abs( yDiff ) ) {/*most significant*/                    
 //         if (yDiff > 0) {
@@ -23174,9 +23221,9 @@ document.querySelector('body').onkeydown = function (event) {
 //         }                                                                 
 //     }
 //     /* reset values */
-//     xDown = null;
-//     yDown = null;                                             
-// };
+//     xDown = null
+//     yDown = null
+// }
 // }
 
 document.querySelector('#nav-arrows .down').addEventListener('click', function () {
@@ -23203,7 +23250,7 @@ document.querySelector('#nav-arrows .up').addEventListener('click', function () 
     previousSection = section;
   }
 });
-},{"@glidejs/glide":274,"smoothscroll":275,"axios":277}],163:[function(require,module,exports) {
+},{"@glidejs/glide":274,"smoothscroll":275,"axios":277}],362:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -23232,7 +23279,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '38974' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '41018' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -23373,5 +23420,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[163,115], null)
+},{}]},{},[362,115], null)
 //# sourceMappingURL=/main.640bd6cb.map

@@ -169,7 +169,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\assets\\icons\\location.png":279,"./..\\assets\\icons\\call.png":280,"./..\\assets\\icons\\list-checkbox.png":281,"./..\\assets\\icons\\upload.png":282,"./..\\assets\\icons\\arrow-left-in-circle.png":283,"./..\\assets\\icons\\arrow-right-in-circle.png":284,"./..\\assets\\icons\\arrow-left.png":56,"./..\\assets\\icons\\arrow-right.png":286,"./..\\assets\\icons\\checkbox-unchecked.png":287,"./..\\assets\\icons\\checkbox-checked.png":288,"./..\\assets\\others\\first-section-bg.png":289,"./..\\assets\\photos\\red-1.png":290,"./..\\assets\\photos\\red-2.png":291,"./..\\assets\\photos\\red-3.png":292,"./..\\assets\\photos\\red-4.png":293,"./..\\assets\\others\\map.png":294,"_css_loader":252}],163:[function(require,module,exports) {
+},{"./..\\assets\\icons\\location.png":279,"./..\\assets\\icons\\call.png":280,"./..\\assets\\icons\\list-checkbox.png":281,"./..\\assets\\icons\\upload.png":282,"./..\\assets\\icons\\arrow-left-in-circle.png":283,"./..\\assets\\icons\\arrow-right-in-circle.png":284,"./..\\assets\\icons\\arrow-left.png":56,"./..\\assets\\icons\\arrow-right.png":286,"./..\\assets\\icons\\checkbox-unchecked.png":287,"./..\\assets\\icons\\checkbox-checked.png":288,"./..\\assets\\others\\first-section-bg.png":289,"./..\\assets\\photos\\red-1.png":61,"./..\\assets\\photos\\red-2.png":62,"./..\\assets\\photos\\red-3.png":63,"./..\\assets\\photos\\red-4.png":64,"./..\\assets\\others\\map.png":294,"_css_loader":252}],362:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -198,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '38974' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '41018' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -417,5 +417,5 @@ LazyPromise.prototype.catch = function (onError) {
   return this.promise.catch(onError);
 };
 },{"./bundle-url":278}],0:[function(require,module,exports) {
-var b=require(387);b.load([["location.f1f21586.png",279],["call.ba996e16.png",280],["list-checkbox.f28b0254.png",281],["upload.880b363e.png",282],["arrow-left-in-circle.cf10ad0e.png",283],["arrow-right-in-circle.b362fba3.png",284],["arrow-left.aa886ee8.png",56],["arrow-right.6bd7ee8b.png",286],["checkbox-unchecked.c0dfd8f5.png",287],["checkbox-checked.93192b5a.png",288],["first-section-bg.33cb64cc.png",289],["red-1.f6dbcaf0.png",290],["red-2.cb7d39ac.png",291],["red-3.5c96b74b.png",292],["red-4.1c4fa1b2.png",293],["map.d1739af0.png",294]]);
-},{}]},{},[163,0], null)
+var b=require(387);b.load([["location.f1f21586.png",279],["call.ba996e16.png",280],["list-checkbox.f28b0254.png",281],["upload.880b363e.png",282],["arrow-left-in-circle.cf10ad0e.png",283],["arrow-right-in-circle.b362fba3.png",284],["arrow-left.aa886ee8.png",56],["arrow-right.6bd7ee8b.png",286],["checkbox-unchecked.c0dfd8f5.png",287],["checkbox-checked.93192b5a.png",288],["first-section-bg.33cb64cc.png",289],["red-1.f6dbcaf0.png",61],["red-2.cb7d39ac.png",62],["red-3.5c96b74b.png",63],["red-4.1c4fa1b2.png",64],["map.d1739af0.png",294]]);
+},{}]},{},[362,0], null)
