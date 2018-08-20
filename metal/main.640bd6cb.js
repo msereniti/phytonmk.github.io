@@ -22745,18 +22745,18 @@ cases.on('move', function (event) {
   document.querySelectorAll('section#section-11 .dots > .dot')[cases._i].classList.add('active');
 });
 
-var recommendations = new _glide2.default('section#section-13 .glide', {
-  perView: clientsOnScreen === 3 ? 2 : 1,
-  keyboard: true,
-  autoplay: 9000
-});
-recommendations.mount();
-document.querySelectorAll('section#section-13 .arrow')[0].addEventListener('click', function () {
-  recommendations.go('<');
-});
-document.querySelectorAll('section#section-13 .arrow')[1].addEventListener('click', function () {
-  recommendations.go('>');
-});
+// const recommendations = new Glide('section#section-13 .glide', {
+//   perView: clientsOnScreen === 3 ? 2 : 1,
+//   keyboard: true,
+//   autoplay: 9000
+// })
+// recommendations.mount()
+// document.querySelectorAll('section#section-13 .arrow')[0].addEventListener('click', () => {
+//   recommendations.go('<')
+// })
+// document.querySelectorAll('section#section-13 .arrow')[1].addEventListener('click', () => {
+//   recommendations.go('>')
+// })
 var managerOptions = new _glide2.default('section#section-15 .glide', {
   perView: clientsOnScreen,
   autoplay: clientsOnScreen === 3 ? false : 3000,
@@ -23119,6 +23119,7 @@ document.querySelectorAll('section').forEach(function (section) {
   section.style.height = window.innerHeight + 'px';
   section.style.overflowY = 'auto';
 });
+if (document.body.clientWidth < 851) footer.style.height = window.innerHeight + 'px';
 footer.style.overflowY = 'auto';
 var buisy = false;
 document.querySelector('body').addEventListener('wheel', function (event) {

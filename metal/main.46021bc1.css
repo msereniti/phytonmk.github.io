@@ -478,8 +478,14 @@ input[type=submit] {
         background-image: url("red-2.cb7d39ac.png"); }
       #section-2 .content .thumbs > div:nth-of-type(3) {
         background-image: url("red-3.5c96b74b.png"); }
+        #section-2 .content .thumbs > div:nth-of-type(3) > div {
+          padding-top: 30px;
+          padding-bottom: 90px; }
       #section-2 .content .thumbs > div:nth-of-type(4) {
         background-image: url("red-4.1c4fa1b2.png"); }
+        #section-2 .content .thumbs > div:nth-of-type(4) > div {
+          padding-top: 30px;
+          padding-bottom: 90px; }
       #section-2 .content .thumbs > div > div {
         opacity: 0;
         transition: .3s all;
@@ -859,9 +865,6 @@ input[type=submit] {
     #section-11 .dots .dot.active {
       background-color: #c64951; }
 
-#section-11 .glide__slide {
-  margin-right: 20px !important; }
-
 #section-11 .container {
   padding-top: 50px;
   display: flex; }
@@ -956,15 +959,17 @@ input[type=submit] {
   text-align: left; }
 
 #section-13 {
+  text-align: center;
   padding-bottom: 100px; }
   #section-13 h2 {
+    text-align: left;
     margin-left: 60px;
     margin-bottom: 50px; }
   #section-13 a {
     padding: 30px;
-    display: block; }
+    display: inline-block; }
     #section-13 a img {
-      max-height: 500px; }
+      max-height: 400px; }
   #section-13 .glide {
     width: calc(100% - 180px); }
 
@@ -1023,7 +1028,7 @@ input[type=submit] {
     overflow: hidden; }
     #section-14 .form-part form {
       max-width: 415px;
-      padding-top: 100px;
+      padding-top: 30px;
       width: 100%;
       margin-bottom: 80px; }
       #section-14 .form-part form > * {
@@ -1663,6 +1668,8 @@ button.upload-btn input[type=file] {
   cursor: pointer; }
 
 @media (max-height: 800px) {
+  #section-1 .slider {
+    padding-top: 20px !important; }
   #section-2 .mega-checkbox label {
     margin-bottom: 10px; }
   #section-5 h2 {
@@ -1678,8 +1685,6 @@ button.upload-btn input[type=file] {
   #section-6 input {
     padding-top: 15px !important;
     padding-bottom: 15px !important; }
-  #section-6 .img-container {
-    display: none !important; }
   #section-6 .glide__slide {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -1855,6 +1860,8 @@ button.upload-btn input[type=file] {
         opacity: 1; }
   #section-6 {
     overflow-y: auto !important; }
+    #section-6 .img-container {
+      display: none !important; }
     #section-6 h2 {
       margin-top: 30px;
       margin-bottom: 0; }
@@ -1919,6 +1926,7 @@ button.upload-btn input[type=file] {
     #section-12 > div p {
       display: none; }
   #section-13 h2 {
+    margin-left: 0px;
     font-size: 30px;
     text-align: center; }
   #section-13 .glide {
