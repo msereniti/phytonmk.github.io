@@ -964,7 +964,8 @@ input[type=submit] {
   #section-13 h2 {
     text-align: left;
     margin-left: 60px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    padding-bottom: 100px; }
   #section-13 a {
     padding: 30px;
     display: inline-block; }
@@ -1238,8 +1239,7 @@ input[type=submit] {
 
 footer {
   overflow-x: hidden;
-  padding-top: 69px;
-  padding-bottom: 69px; }
+  padding-top: 69px; }
   footer .container {
     flex-wrap: wrap;
     display: flex;
@@ -2098,3 +2098,12 @@ button.upload-btn input[type=file] {
     line-height: 25px; }
   #section-1 .red-bg {
     font-size: 20px !important; } }
+
+a.general-marketing {
+  margin-top: 200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+  width: 100%;
+  background-color: white;
+  text-align: center; }

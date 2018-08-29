@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({274:[function(require,module,exports) {
+})({"..\\node_modules\\@glidejs\\glide\\dist\\glide.esm.js":[function(require,module,exports) {
 
 'use strict';
 
@@ -3658,7 +3658,7 @@ var Glide$1 = function (_Core) {
 }(Glide);
 
 exports.default = Glide$1;
-},{}],275:[function(require,module,exports) {
+},{}],"..\\node_modules\\smoothscroll\\smoothscroll.js":[function(require,module,exports) {
 var define;
 (function (root, smoothScroll) {
   'use strict';
@@ -3781,7 +3781,7 @@ return smoothScroll;
 
 });
 
-},{}],298:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\helpers\\bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -3794,7 +3794,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],310:[function(require,module,exports) {
+},{}],"..\\node_modules\\is-buffer\\index.js":[function(require,module,exports) {
 /*!
  * Determine if an object is a Buffer
  *
@@ -3817,7 +3817,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],296:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\utils.js":[function(require,module,exports) {
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -4122,7 +4122,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":298,"is-buffer":310}],304:[function(require,module,exports) {
+},{"./helpers/bind":"..\\node_modules\\axios\\lib\\helpers\\bind.js","is-buffer":"..\\node_modules\\is-buffer\\index.js"}],"..\\node_modules\\axios\\lib\\helpers\\normalizeHeaderName.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('../utils');
@@ -4136,7 +4136,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":296}],315:[function(require,module,exports) {
+},{"../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\core\\enhanceError.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -4159,7 +4159,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],314:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\core\\createError.js":[function(require,module,exports) {
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -4179,7 +4179,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":315}],312:[function(require,module,exports) {
+},{"./enhanceError":"..\\node_modules\\axios\\lib\\core\\enhanceError.js"}],"..\\node_modules\\axios\\lib\\core\\settle.js":[function(require,module,exports) {
 'use strict';
 
 var createError = require('./createError');
@@ -4207,7 +4207,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":314}],313:[function(require,module,exports) {
+},{"./createError":"..\\node_modules\\axios\\lib\\core\\createError.js"}],"..\\node_modules\\axios\\lib\\helpers\\buildURL.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -4275,7 +4275,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":296}],322:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\helpers\\parseHeaders.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -4330,7 +4330,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":296}],323:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\helpers\\isURLSameOrigin.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -4400,7 +4400,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":296}],324:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\helpers\\btoa.js":[function(require,module,exports) {
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -4438,7 +4438,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],325:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\helpers\\cookies.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -4493,7 +4493,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":296}],305:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\adapters\\xhr.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -4668,7 +4668,7 @@ module.exports = function xhrAdapter(config) {
     request.send(requestData);
   });
 };
-},{"./../utils":296,"./../core/settle":312,"./../helpers/buildURL":313,"./../helpers/parseHeaders":322,"./../helpers/isURLSameOrigin":323,"../core/createError":314,"./../helpers/btoa":324,"./../helpers/cookies":325}],341:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js","./../core/settle":"..\\node_modules\\axios\\lib\\core\\settle.js","./../helpers/buildURL":"..\\node_modules\\axios\\lib\\helpers\\buildURL.js","./../helpers/parseHeaders":"..\\node_modules\\axios\\lib\\helpers\\parseHeaders.js","./../helpers/isURLSameOrigin":"..\\node_modules\\axios\\lib\\helpers\\isURLSameOrigin.js","../core/createError":"..\\node_modules\\axios\\lib\\core\\createError.js","./../helpers/btoa":"..\\node_modules\\axios\\lib\\helpers\\btoa.js","./../helpers/cookies":"..\\node_modules\\axios\\lib\\helpers\\cookies.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\capability.js":[function(require,module,exports) {
 var global = arguments[3];
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
 
@@ -4744,7 +4744,7 @@ function isFunction (value) {
 
 xhr = null // Help gc
 
-},{}],342:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js":[function(require,module,exports) {
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -4769,7 +4769,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],307:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -4956,7 +4956,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],367:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process-nextick-args\\index.js":[function(require,module,exports) {
 var process = require("process");
 'use strict';
 
@@ -5003,14 +5003,14 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 
-},{"process":307}],354:[function(require,module,exports) {
+},{"process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\isarray\\index.js":[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],343:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\events\\events.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5276,7 +5276,7 @@ function isObject(arg) {
 function isUndefined(arg) {
   return arg === void 0;
 }
-},{}],355:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\base64-js\\index.js":[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -5429,7 +5429,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],356:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\ieee754\\index.js":[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -5515,7 +5515,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],319:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js":[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -7308,7 +7308,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":355,"ieee754":356,"isarray":354,"buffer":319}],366:[function(require,module,exports) {
+},{"base64-js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\base64-js\\index.js","ieee754":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\ieee754\\index.js","isarray":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\isarray\\index.js","buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -7418,7 +7418,7 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-},{"buffer":319}],378:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util-deprecate\\browser.js":[function(require,module,exports) {
 var global = arguments[3];
 
 /**
@@ -7488,7 +7488,7 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-},{}],379:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\safe-buffer\\index.js":[function(require,module,exports) {
 
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
@@ -7553,7 +7553,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":319}],377:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\destroy.js":[function(require,module,exports) {
 'use strict';
 
 /*<replacement>*/
@@ -7628,7 +7628,7 @@ module.exports = {
   destroy: destroy,
   undestroy: undestroy
 };
-},{"process-nextick-args":367}],361:[function(require,module,exports) {
+},{"process-nextick-args":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process-nextick-args\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7760,7 +7760,7 @@ Duplex.prototype._destroy = function (err, cb) {
 
   pna.nextTick(cb, err);
 };
-},{"process-nextick-args":367,"core-util-is":366,"inherits":342,"./_stream_readable":360,"./_stream_writable":359}],359:[function(require,module,exports) {
+},{"process-nextick-args":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process-nextick-args\\index.js","core-util-is":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","./_stream_readable":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_readable.js","./_stream_writable":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_writable.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_writable.js":[function(require,module,exports) {
 var process = require("process");
 
 var global = arguments[3];
@@ -8451,19 +8451,19 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-},{"process-nextick-args":367,"core-util-is":366,"inherits":342,"util-deprecate":378,"./internal/streams/stream":376,"safe-buffer":379,"./internal/streams/destroy":377,"./_stream_duplex":361,"process":307}],344:[function(require,module,exports) {
+},{"process-nextick-args":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process-nextick-args\\index.js","core-util-is":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","util-deprecate":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util-deprecate\\browser.js","./internal/streams/stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\stream.js","safe-buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\safe-buffer\\index.js","./internal/streams/destroy":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\destroy.js","./_stream_duplex":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\writable-browser.js":[function(require,module,exports) {
 module.exports = require('./lib/_stream_writable.js');
 
-},{"./lib/_stream_writable.js":359}],349:[function(require,module,exports) {
+},{"./lib/_stream_writable.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_writable.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\duplex-browser.js":[function(require,module,exports) {
 module.exports = require('./lib/_stream_duplex.js');
 
-},{"./lib/_stream_duplex.js":361}],347:[function(require,module,exports) {
+},{"./lib/_stream_duplex.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\transform.js":[function(require,module,exports) {
 module.exports = require('./readable').Transform
 
-},{"./readable":346}],348:[function(require,module,exports) {
+},{"./readable":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\passthrough.js":[function(require,module,exports) {
 module.exports = require('./readable').PassThrough
 
-},{"./readable":346}],333:[function(require,module,exports) {
+},{"./readable":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-browserify\\index.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8592,12 +8592,12 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":343,"inherits":342,"readable-stream/readable.js":346,"readable-stream/writable.js":344,"readable-stream/duplex.js":349,"readable-stream/transform.js":347,"readable-stream/passthrough.js":348}],376:[function(require,module,exports) {
+},{"events":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\events\\events.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","readable-stream/readable.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js","readable-stream/writable.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\writable-browser.js","readable-stream/duplex.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\duplex-browser.js","readable-stream/transform.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\transform.js","readable-stream/passthrough.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\passthrough.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\stream.js":[function(require,module,exports) {
 module.exports = require('stream');
 
-},{"stream":333}],380:[function(require,module,exports) {
+},{"stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-browserify\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\_empty.js":[function(require,module,exports) {
 
-},{}],381:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\BufferList.js":[function(require,module,exports) {
 
 'use strict';
 
@@ -8678,7 +8678,7 @@ if (util && util.inspect && util.inspect.custom) {
     return this.constructor.name + ' ' + obj;
   };
 }
-},{"safe-buffer":379,"util":380}],382:[function(require,module,exports) {
+},{"safe-buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\safe-buffer\\index.js","util":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\_empty.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\string_decoder\\lib\\string_decoder.js":[function(require,module,exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8976,7 +8976,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":379}],360:[function(require,module,exports) {
+},{"safe-buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\safe-buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_readable.js":[function(require,module,exports) {
 
 var global = arguments[3];
 var process = require("process");
@@ -9999,7 +9999,7 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-},{"process-nextick-args":367,"isarray":354,"events":343,"./internal/streams/stream":376,"safe-buffer":379,"core-util-is":366,"inherits":342,"util":380,"./internal/streams/BufferList":381,"./internal/streams/destroy":377,"./_stream_duplex":361,"string_decoder/":382,"process":307}],362:[function(require,module,exports) {
+},{"process-nextick-args":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process-nextick-args\\index.js","isarray":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\isarray\\index.js","events":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\events\\events.js","./internal/streams/stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\stream.js","safe-buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\safe-buffer\\index.js","core-util-is":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","util":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\_empty.js","./internal/streams/BufferList":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\BufferList.js","./internal/streams/destroy":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\internal\\streams\\destroy.js","./_stream_duplex":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js","string_decoder/":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\string_decoder\\lib\\string_decoder.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_transform.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10214,7 +10214,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":361,"core-util-is":366,"inherits":342}],363:[function(require,module,exports) {
+},{"./_stream_duplex":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js","core-util-is":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_passthrough.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10262,7 +10262,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":362,"core-util-is":366,"inherits":342}],346:[function(require,module,exports) {
+},{"./_stream_transform":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_transform.js","core-util-is":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\core-util-is\\lib\\util.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js":[function(require,module,exports) {
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -10271,7 +10271,7 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_readable.js":360,"./lib/_stream_writable.js":359,"./lib/_stream_duplex.js":361,"./lib/_stream_transform.js":362,"./lib/_stream_passthrough.js":363}],337:[function(require,module,exports) {
+},{"./lib/_stream_readable.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_readable.js","./lib/_stream_writable.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_writable.js","./lib/_stream_duplex.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_duplex.js","./lib/_stream_transform.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_transform.js","./lib/_stream_passthrough.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\lib\\_stream_passthrough.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\response.js":[function(require,module,exports) {
 var process = require("process");
 var Buffer = require("buffer").Buffer;
 var global = arguments[3];
@@ -10500,7 +10500,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 	}
 }
 
-},{"./capability":341,"inherits":342,"readable-stream":346,"process":307,"buffer":319}],345:[function(require,module,exports) {
+},{"./capability":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\capability.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","readable-stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js","buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\to-arraybuffer\\index.js":[function(require,module,exports) {
 
 var Buffer = require('buffer').Buffer
 
@@ -10530,7 +10530,7 @@ module.exports = function (buf) {
 	}
 }
 
-},{"buffer":319}],336:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\request.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 var global = arguments[3];
 var process = require("process");
@@ -10862,7 +10862,7 @@ var unsafeHeaders = [
 	'via'
 ]
 
-},{"./capability":341,"inherits":342,"./response":337,"readable-stream":346,"to-arraybuffer":345,"buffer":319,"process":307}],339:[function(require,module,exports) {
+},{"./capability":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\capability.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","./response":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\response.js","readable-stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\readable-stream\\readable-browser.js","to-arraybuffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\to-arraybuffer\\index.js","buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\xtend\\immutable.js":[function(require,module,exports) {
 module.exports = extend;
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -10882,7 +10882,7 @@ function extend() {
 
     return target;
 }
-},{}],338:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\builtin-status-codes\\browser.js":[function(require,module,exports) {
 module.exports = {
   "100": "Continue",
   "101": "Switching Protocols",
@@ -10948,7 +10948,7 @@ module.exports = {
   "511": "Network Authentication Required"
 }
 
-},{}],330:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\punycode\\punycode.js":[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -11485,7 +11485,7 @@ var define;
 
 }(this));
 
-},{}],329:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\util.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = {
@@ -11503,7 +11503,7 @@ module.exports = {
   }
 };
 
-},{}],357:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\decode.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -11592,7 +11592,7 @@ module.exports = function (qs, sep, eq, options) {
 var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
-},{}],358:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\encode.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -11676,12 +11676,12 @@ var objectKeys = Object.keys || function (obj) {
   }
   return res;
 };
-},{}],331:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\index.js":[function(require,module,exports) {
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
-},{"./decode":357,"./encode":358}],318:[function(require,module,exports) {
+},{"./decode":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\decode.js","./encode":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\encode.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\url.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12415,7 +12415,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"punycode":330,"./util":329,"querystring":331}],316:[function(require,module,exports) {
+},{"punycode":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\punycode\\punycode.js","./util":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\util.js","querystring":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\querystring-es3\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\index.js":[function(require,module,exports) {
 var global = arguments[3];
 var ClientRequest = require('./lib/request')
 var response = require('./lib/response')
@@ -12502,7 +12502,7 @@ http.METHODS = [
 	'UNLOCK',
 	'UNSUBSCRIBE'
 ]
-},{"./lib/request":336,"./lib/response":337,"xtend":339,"builtin-status-codes":338,"url":318}],317:[function(require,module,exports) {
+},{"./lib/request":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\request.js","./lib/response":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\lib\\response.js","xtend":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\xtend\\immutable.js","builtin-status-codes":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\builtin-status-codes\\browser.js","url":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\url.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\https-browserify\\index.js":[function(require,module,exports) {
 var http = require('http')
 var url = require('url')
 
@@ -12535,13 +12535,13 @@ function validateParams (params) {
   return params
 }
 
-},{"http":316,"url":318}],369:[function(require,module,exports) {
+},{"http":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\index.js","url":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\url.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\util\\support\\isBuffer.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 module.exports = function isBuffer(arg) {
   return arg instanceof Buffer;
 }
 
-},{"buffer":319}],375:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\inherits\\inherits_browser.js":[function(require,module,exports) {
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -12566,7 +12566,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],365:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\util\\util.js":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 // Copyright Joyent, Inc. and other Node contributors.
@@ -13113,7 +13113,7 @@ exports._extend = function (origin, add) {
 function hasOwnProperty(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
-},{"./support/isBuffer":369,"inherits":375,"process":307}],334:[function(require,module,exports) {
+},{"./support/isBuffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\util\\support\\isBuffer.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\inherits\\inherits_browser.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\assert.js":[function(require,module,exports) {
 var global = arguments[3];
 'use strict';
 
@@ -13606,7 +13606,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":365}],385:[function(require,module,exports) {
+},{"util/":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\node_modules\\util\\util.js"}],"..\\node_modules\\ms\\index.js":[function(require,module,exports) {
 /**
  * Helpers.
  */
@@ -13760,7 +13760,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],368:[function(require,module,exports) {
+},{}],"..\\node_modules\\debug\\src\\debug.js":[function(require,module,exports) {
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -13987,7 +13987,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":385}],340:[function(require,module,exports) {
+},{"ms":"..\\node_modules\\ms\\index.js"}],"..\\node_modules\\debug\\src\\browser.js":[function(require,module,exports) {
 var process = require("process");
 /**
  * This is the web browser implementation of `debug()`.
@@ -14161,7 +14161,7 @@ function localstorage() {
     return window.localStorage;
   } catch (e) {}
 }
-},{"./debug":368,"process":307}],321:[function(require,module,exports) {
+},{"./debug":"..\\node_modules\\debug\\src\\debug.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"..\\node_modules\\follow-redirects\\index.js":[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var url = require("url");
@@ -14448,7 +14448,7 @@ function wrap(protocols) {
 // Exports
 module.exports = wrap({ http: http, https: https });
 module.exports.wrap = wrap;
-},{"url":318,"http":316,"https":317,"assert":334,"stream":333,"debug":340}],353:[function(require,module,exports) {
+},{"url":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\url.js","http":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\index.js","https":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\https-browserify\\index.js","assert":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\assert.js","stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-browserify\\index.js","debug":"..\\node_modules\\debug\\src\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\zstream.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -14497,7 +14497,7 @@ function ZStream() {
 
 module.exports = ZStream;
 
-},{}],370:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\utils\\common.js":[function(require,module,exports) {
 'use strict';
 
 
@@ -14604,7 +14604,7 @@ exports.setTyped = function (on) {
 
 exports.setTyped(TYPED_OK);
 
-},{}],383:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\trees.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -15826,7 +15826,7 @@ exports._tr_flush_block  = _tr_flush_block;
 exports._tr_tally = _tr_tally;
 exports._tr_align = _tr_align;
 
-},{"../utils/common":370}],371:[function(require,module,exports) {
+},{"../utils/common":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\utils\\common.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\adler32.js":[function(require,module,exports) {
 'use strict';
 
 // Note: adler32 takes 12% for level 0 and 2% for level 6.
@@ -15879,7 +15879,7 @@ function adler32(adler, buf, len, pos) {
 
 module.exports = adler32;
 
-},{}],372:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\crc32.js":[function(require,module,exports) {
 'use strict';
 
 // Note: we can't get significant speed boost here.
@@ -15940,7 +15940,7 @@ function crc32(crc, buf, len, pos) {
 
 module.exports = crc32;
 
-},{}],384:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\messages.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -15974,7 +15974,7 @@ module.exports = {
   '-6':   'incompatible version' /* Z_VERSION_ERROR (-6) */
 };
 
-},{}],351:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\deflate.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -17850,7 +17850,7 @@ exports.deflatePrime = deflatePrime;
 exports.deflateTune = deflateTune;
 */
 
-},{"../utils/common":370,"./trees":383,"./adler32":371,"./crc32":372,"./messages":384}],373:[function(require,module,exports) {
+},{"../utils/common":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\utils\\common.js","./trees":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\trees.js","./adler32":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\adler32.js","./crc32":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\crc32.js","./messages":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\messages.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inffast.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -18197,7 +18197,7 @@ module.exports = function inflate_fast(strm, start) {
   return;
 };
 
-},{}],374:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inftrees.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -18542,7 +18542,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
   return 0;
 };
 
-},{"../utils/common":370}],350:[function(require,module,exports) {
+},{"../utils/common":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\utils\\common.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inflate.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -20100,7 +20100,7 @@ exports.inflateSyncPoint = inflateSyncPoint;
 exports.inflateUndermine = inflateUndermine;
 */
 
-},{"../utils/common":370,"./adler32":371,"./crc32":372,"./inffast":373,"./inftrees":374}],352:[function(require,module,exports) {
+},{"../utils/common":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\utils\\common.js","./adler32":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\adler32.js","./crc32":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\crc32.js","./inffast":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inffast.js","./inftrees":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inftrees.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\constants.js":[function(require,module,exports) {
 'use strict';
 
 // (C) 1995-2013 Jean-loup Gailly and Mark Adler
@@ -20170,7 +20170,7 @@ module.exports = {
   //Z_NULL:                 null // Use -1 or null inline, depending on var type
 };
 
-},{}],332:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\lib\\binding.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 var process = require("process");
 'use strict';
@@ -20582,13 +20582,13 @@ Zlib.prototype._reset = function () {
 };
 
 exports.Zlib = Zlib;
-},{"assert":334,"pako/lib/zlib/zstream":353,"pako/lib/zlib/deflate.js":351,"pako/lib/zlib/inflate.js":350,"pako/lib/zlib/constants":352,"buffer":319,"process":307}],364:[function(require,module,exports) {
+},{"assert":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\assert.js","pako/lib/zlib/zstream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\zstream.js","pako/lib/zlib/deflate.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\deflate.js","pako/lib/zlib/inflate.js":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\inflate.js","pako/lib/zlib/constants":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\node_modules\\pako\\lib\\zlib\\constants.js","buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util\\support\\isBuffer.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 module.exports = function isBuffer(arg) {
   return arg instanceof Buffer;
 }
 
-},{"buffer":319}],335:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util\\util.js":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 // Copyright Joyent, Inc. and other Node contributors.
@@ -21135,7 +21135,7 @@ exports._extend = function (origin, add) {
 function hasOwnProperty(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
-},{"./support/isBuffer":364,"inherits":342,"process":307}],320:[function(require,module,exports) {
+},{"./support/isBuffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util\\support\\isBuffer.js","inherits":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\inherits\\inherits_browser.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\lib\\index.js":[function(require,module,exports) {
 
 var process = require("process");
 'use strict';
@@ -21747,7 +21747,7 @@ util.inherits(Gunzip, Zlib);
 util.inherits(DeflateRaw, Zlib);
 util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
-},{"buffer":319,"stream":333,"./binding":332,"util":335,"assert":334,"process":307}],311:[function(require,module,exports) {
+},{"buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js","stream":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-browserify\\index.js","./binding":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\lib\\binding.js","util":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\util\\util.js","assert":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\assert\\assert.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"..\\node_modules\\axios\\package.json":[function(require,module,exports) {
 module.exports = {
   "name": "axios",
   "version": "0.18.0",
@@ -21832,7 +21832,7 @@ module.exports = {
   ]
 }
 ;
-},{}],306:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\adapters\\http.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 var process = require("process");
 'use strict';
@@ -22073,7 +22073,7 @@ module.exports = function httpAdapter(config) {
   });
 };
 
-},{"./../utils":296,"./../core/settle":312,"./../helpers/buildURL":313,"http":316,"https":317,"follow-redirects":321,"url":318,"zlib":320,"./../../package.json":311,"../core/createError":314,"../core/enhanceError":315,"buffer":319,"process":307}],297:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js","./../core/settle":"..\\node_modules\\axios\\lib\\core\\settle.js","./../helpers/buildURL":"..\\node_modules\\axios\\lib\\helpers\\buildURL.js","http":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\stream-http\\index.js","https":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\https-browserify\\index.js","follow-redirects":"..\\node_modules\\follow-redirects\\index.js","url":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\url\\url.js","zlib":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\browserify-zlib\\lib\\index.js","./../../package.json":"..\\node_modules\\axios\\package.json","../core/createError":"..\\node_modules\\axios\\lib\\core\\createError.js","../core/enhanceError":"..\\node_modules\\axios\\lib\\core\\enhanceError.js","buffer":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\buffer\\index.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"..\\node_modules\\axios\\lib\\defaults.js":[function(require,module,exports) {
 var process = require("process");
 'use strict';
 
@@ -22172,7 +22172,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-},{"./utils":296,"./helpers/normalizeHeaderName":304,"./adapters/xhr":305,"./adapters/http":306,"process":307}],308:[function(require,module,exports) {
+},{"./utils":"..\\node_modules\\axios\\lib\\utils.js","./helpers/normalizeHeaderName":"..\\node_modules\\axios\\lib\\helpers\\normalizeHeaderName.js","./adapters/xhr":"..\\node_modules\\axios\\lib\\adapters\\xhr.js","./adapters/http":"..\\node_modules\\axios\\lib\\adapters\\http.js","process":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\node_modules\\process\\browser.js"}],"..\\node_modules\\axios\\lib\\core\\InterceptorManager.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -22226,7 +22226,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":296}],326:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\core\\transformData.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -22248,14 +22248,14 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":296}],302:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js"}],"..\\node_modules\\axios\\lib\\cancel\\isCancel.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],327:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\helpers\\isAbsoluteURL.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -22271,7 +22271,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],328:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\helpers\\combineURLs.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -22287,7 +22287,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],309:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\core\\dispatchRequest.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -22375,7 +22375,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"./../utils":296,"./transformData":326,"../cancel/isCancel":302,"../defaults":297,"./../helpers/isAbsoluteURL":327,"./../helpers/combineURLs":328}],299:[function(require,module,exports) {
+},{"./../utils":"..\\node_modules\\axios\\lib\\utils.js","./transformData":"..\\node_modules\\axios\\lib\\core\\transformData.js","../cancel/isCancel":"..\\node_modules\\axios\\lib\\cancel\\isCancel.js","../defaults":"..\\node_modules\\axios\\lib\\defaults.js","./../helpers/isAbsoluteURL":"..\\node_modules\\axios\\lib\\helpers\\isAbsoluteURL.js","./../helpers/combineURLs":"..\\node_modules\\axios\\lib\\helpers\\combineURLs.js"}],"..\\node_modules\\axios\\lib\\core\\Axios.js":[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./../defaults');
@@ -22456,7 +22456,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":297,"./../utils":296,"./InterceptorManager":308,"./dispatchRequest":309}],300:[function(require,module,exports) {
+},{"./../defaults":"..\\node_modules\\axios\\lib\\defaults.js","./../utils":"..\\node_modules\\axios\\lib\\utils.js","./InterceptorManager":"..\\node_modules\\axios\\lib\\core\\InterceptorManager.js","./dispatchRequest":"..\\node_modules\\axios\\lib\\core\\dispatchRequest.js"}],"..\\node_modules\\axios\\lib\\cancel\\Cancel.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -22477,7 +22477,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],301:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\cancel\\CancelToken.js":[function(require,module,exports) {
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -22536,7 +22536,7 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":300}],303:[function(require,module,exports) {
+},{"./Cancel":"..\\node_modules\\axios\\lib\\cancel\\Cancel.js"}],"..\\node_modules\\axios\\lib\\helpers\\spread.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -22565,7 +22565,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],295:[function(require,module,exports) {
+},{}],"..\\node_modules\\axios\\lib\\axios.js":[function(require,module,exports) {
 'use strict';
 
 var utils = require('./utils');
@@ -22619,9 +22619,9 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./utils":296,"./helpers/bind":298,"./core/Axios":299,"./defaults":297,"./cancel/Cancel":300,"./cancel/CancelToken":301,"./cancel/isCancel":302,"./helpers/spread":303}],277:[function(require,module,exports) {
+},{"./utils":"..\\node_modules\\axios\\lib\\utils.js","./helpers/bind":"..\\node_modules\\axios\\lib\\helpers\\bind.js","./core/Axios":"..\\node_modules\\axios\\lib\\core\\Axios.js","./defaults":"..\\node_modules\\axios\\lib\\defaults.js","./cancel/Cancel":"..\\node_modules\\axios\\lib\\cancel\\Cancel.js","./cancel/CancelToken":"..\\node_modules\\axios\\lib\\cancel\\CancelToken.js","./cancel/isCancel":"..\\node_modules\\axios\\lib\\cancel\\isCancel.js","./helpers/spread":"..\\node_modules\\axios\\lib\\helpers\\spread.js"}],"..\\node_modules\\axios\\index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":295}],115:[function(require,module,exports) {
+},{"./lib/axios":"..\\node_modules\\axios\\lib\\axios.js"}],"js\\main.js":[function(require,module,exports) {
 'use strict';
 
 var _glide = require('@glidejs/glide');
@@ -22642,6 +22642,7 @@ var clientsOnScreen = 3;
 if (document.body.clientWidth < 1100) clientsOnScreen = 2;
 if (document.body.clientWidth < 850) clientsOnScreen = 1;
 var clients = new _glide2.default('section#section-1 .glide', {
+  type: 'carousel',
   perView: clientsOnScreen,
   keyboard: true,
   autoplay: 9000
@@ -22721,7 +22722,7 @@ document.querySelectorAll('section#section-6 input, section#section-6 textarea')
 
 var cases = new _glide2.default('section#section-11 .glide', {
   perView: 1,
-  autoplay: false,
+  autoplay: 4000,
   activeNav: true
 });
 cases.mount();
@@ -23266,7 +23267,7 @@ document.querySelector('#nav-arrows .up').addEventListener('click', function () 
     previousSection = section;
   }
 });
-},{"@glidejs/glide":274,"smoothscroll":275,"axios":277}],362:[function(require,module,exports) {
+},{"@glidejs/glide":"..\\node_modules\\@glidejs\\glide\\dist\\glide.esm.js","smoothscroll":"..\\node_modules\\smoothscroll\\smoothscroll.js","axios":"..\\node_modules\\axios\\index.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -23295,7 +23296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '41018' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '5199' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -23372,7 +23373,7 @@ function getParents(bundle, id) {
     for (d in modules[k][1]) {
       dep = modules[k][1][d];
       if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(+k);
+        parents.push(k);
       }
     }
   }
@@ -23436,5 +23437,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[362,115], null)
+},{}]},{},["C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js","js\\main.js"], null)
 //# sourceMappingURL=/main.640bd6cb.map

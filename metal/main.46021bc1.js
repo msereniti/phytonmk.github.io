@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({278:[function(require,module,exports) {
+})({"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -133,7 +133,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],252:[function(require,module,exports) {
+},{}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -164,12 +164,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":278}],114:[function(require,module,exports) {
+},{"./bundle-url":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js"}],"styles\\main.sass":[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\assets\\icons\\location.png":279,"./..\\assets\\icons\\call.png":280,"./..\\assets\\icons\\list-checkbox.png":281,"./..\\assets\\icons\\upload.png":282,"./..\\assets\\icons\\arrow-left-in-circle.png":283,"./..\\assets\\icons\\arrow-right-in-circle.png":284,"./..\\assets\\icons\\arrow-left.png":56,"./..\\assets\\icons\\arrow-right.png":286,"./..\\assets\\icons\\checkbox-unchecked.png":287,"./..\\assets\\icons\\checkbox-checked.png":288,"./..\\assets\\others\\first-section-bg.png":289,"./..\\assets\\photos\\red-1.png":61,"./..\\assets\\photos\\red-2.png":62,"./..\\assets\\photos\\red-3.png":63,"./..\\assets\\photos\\red-4.png":64,"./..\\assets\\others\\map.png":294,"_css_loader":252}],362:[function(require,module,exports) {
+},{"./..\\assets\\icons\\location.png":[["location.f1f21586.png","assets\\icons\\location.png"],"assets\\icons\\location.png"],"./..\\assets\\icons\\call.png":[["call.ba996e16.png","assets\\icons\\call.png"],"assets\\icons\\call.png"],"./..\\assets\\icons\\list-checkbox.png":[["list-checkbox.f28b0254.png","assets\\icons\\list-checkbox.png"],"assets\\icons\\list-checkbox.png"],"./..\\assets\\icons\\upload.png":[["upload.880b363e.png","assets\\icons\\upload.png"],"assets\\icons\\upload.png"],"./..\\assets\\icons\\arrow-left-in-circle.png":[["arrow-left-in-circle.cf10ad0e.png","assets\\icons\\arrow-left-in-circle.png"],"assets\\icons\\arrow-left-in-circle.png"],"./..\\assets\\icons\\arrow-right-in-circle.png":[["arrow-right-in-circle.b362fba3.png","assets\\icons\\arrow-right-in-circle.png"],"assets\\icons\\arrow-right-in-circle.png"],"./..\\assets\\icons\\arrow-left.png":[["arrow-left.aa886ee8.png","assets\\icons\\arrow-left.png"],"assets\\icons\\arrow-left.png"],"./..\\assets\\icons\\arrow-right.png":[["arrow-right.6bd7ee8b.png","assets\\icons\\arrow-right.png"],"assets\\icons\\arrow-right.png"],"./..\\assets\\icons\\checkbox-unchecked.png":[["checkbox-unchecked.c0dfd8f5.png","assets\\icons\\checkbox-unchecked.png"],"assets\\icons\\checkbox-unchecked.png"],"./..\\assets\\icons\\checkbox-checked.png":[["checkbox-checked.93192b5a.png","assets\\icons\\checkbox-checked.png"],"assets\\icons\\checkbox-checked.png"],"./..\\assets\\others\\first-section-bg.png":[["first-section-bg.33cb64cc.png","assets\\others\\first-section-bg.png"],"assets\\others\\first-section-bg.png"],"./..\\assets\\photos\\red-1.png":[["red-1.f6dbcaf0.png","assets\\photos\\red-1.png"],"assets\\photos\\red-1.png"],"./..\\assets\\photos\\red-2.png":[["red-2.cb7d39ac.png","assets\\photos\\red-2.png"],"assets\\photos\\red-2.png"],"./..\\assets\\photos\\red-3.png":[["red-3.5c96b74b.png","assets\\photos\\red-3.png"],"assets\\photos\\red-3.png"],"./..\\assets\\photos\\red-4.png":[["red-4.1c4fa1b2.png","assets\\photos\\red-4.png"],"assets\\photos\\red-4.png"],"./..\\assets\\others\\map.png":[["map.d1739af0.png","assets\\others\\map.png"],"assets\\others\\map.png"],"_css_loader":"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -198,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '41018' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '5199' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -275,7 +275,7 @@ function getParents(bundle, id) {
     for (d in modules[k][1]) {
       dep = modules[k][1][d];
       if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(+k);
+        parents.push(k);
       }
     }
   }
@@ -339,83 +339,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],387:[function(require,module,exports) {
-var getBundleURL = require('./bundle-url').getBundleURL;
-
-function loadBundlesLazy(bundles) {
-  if (!Array.isArray(bundles)) {
-    bundles = [bundles];
-  }
-
-  var id = bundles[bundles.length - 1];
-
-  try {
-    return Promise.resolve(require(id));
-  } catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-      return new LazyPromise(function (resolve, reject) {
-        loadBundles(bundles.slice(0, -1)).then(function () {
-          return require(id);
-        }).then(resolve, reject);
-      });
-    }
-
-    throw err;
-  }
-}
-
-function loadBundles(bundles) {
-  return Promise.all(bundles.map(loadBundle));
-}
-
-var bundleLoaders = {};
-function registerBundleLoader(type, loader) {
-  bundleLoaders[type] = loader;
-}
-
-module.exports = exports = loadBundlesLazy;
-exports.load = loadBundles;
-exports.register = registerBundleLoader;
-
-var bundles = {};
-function loadBundle(bundle) {
-  var id;
-  if (Array.isArray(bundle)) {
-    id = bundle[1];
-    bundle = bundle[0];
-  }
-
-  if (bundles[bundle]) {
-    return bundles[bundle];
-  }
-
-  var type = (bundle.substring(bundle.lastIndexOf('.') + 1, bundle.length) || bundle).toLowerCase();
-  var bundleLoader = bundleLoaders[type];
-  if (bundleLoader) {
-    return bundles[bundle] = bundleLoader(getBundleURL() + bundle).then(function (resolved) {
-      if (resolved) {
-        module.bundle.register(id, resolved);
-      }
-
-      return resolved;
-    });
-  }
-}
-
-function LazyPromise(executor) {
-  this.executor = executor;
-  this.promise = null;
-}
-
-LazyPromise.prototype.then = function (onSuccess, onError) {
-  if (this.promise === null) this.promise = new Promise(this.executor);
-  return this.promise.then(onSuccess, onError);
-};
-
-LazyPromise.prototype.catch = function (onError) {
-  if (this.promise === null) this.promise = new Promise(this.executor);
-  return this.promise.catch(onError);
-};
-},{"./bundle-url":278}],0:[function(require,module,exports) {
-var b=require(387);b.load([["location.f1f21586.png",279],["call.ba996e16.png",280],["list-checkbox.f28b0254.png",281],["upload.880b363e.png",282],["arrow-left-in-circle.cf10ad0e.png",283],["arrow-right-in-circle.b362fba3.png",284],["arrow-left.aa886ee8.png",56],["arrow-right.6bd7ee8b.png",286],["checkbox-unchecked.c0dfd8f5.png",287],["checkbox-checked.93192b5a.png",288],["first-section-bg.33cb64cc.png",289],["red-1.f6dbcaf0.png",61],["red-2.cb7d39ac.png",62],["red-3.5c96b74b.png",63],["red-4.1c4fa1b2.png",64],["map.d1739af0.png",294]]);
-},{}]},{},[362,0], null)
+},{}]},{},["C:\\Users\\phyto\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js"], null)
